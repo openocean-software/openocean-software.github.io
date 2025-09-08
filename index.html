@@ -1,23 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>openocean.software</title>
     <style>
-      body {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          height: 100vh;
-          margin: 0;
-          background-color: #f0f0f0;
-      }
-      img {
-          max-width: 100%;
-          height: auto;
-      }
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            background-color: #f4f4f4;
+        }
+
+        .stack-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px; /* Adds vertical spacing between divs */
+            align-items: center; /* Aligns all content blocks to the center horizontally */
+            padding: 20px;
+            width: 100%; /* Ensure it spans the body width */
+        }
+
+        .centered-block {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            background-color: #ffffff;
+            padding: 20px 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 640px;
+            width: 100%; /* Ensures it stays responsive */
+        }
+
+        .centered-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+
+        .centered-text {
+            font-size: 1.1rem;
+            color: #333333;
+            margin-bottom: 20px;
+        }
+
+        .centered-link {
+            font-size: 1rem;
+            color: #ffffff;
+            text-decoration: none;
+            background-color: #007bff;
+            padding: 10px 20px;
+            border-radius: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .centered-link:hover {
+            background-color: #0056b3;
+        }
+
     </style>
 </head>
 <body>
-    <img src="openocean-logo1.svg" alt="openocean.software logo">
+<div class="stack-container">
+    <div class="centered-block">
+        <img class="centered-image" src="openocean-logo1.svg" alt="openocean.software logo">
+        <p class="centered-text">OpenOcean.software is an NSF <a href="https://www.nsf.gov/funding/initiatives/pathways-enable-open-source-ecosystems/about-pose>">Pathways to Open Source</a> project focused on creating a
+            robust and scalable marine robotics open-source ecosystem. The project aims to integrate and standardize
+            several existing open-source software frameworks, but is also designed with extensibility in mind, allowing
+            for the incorporation of additional projects while addressing critical gaps in quality assurance. Key
+            objectives include designing tools for project discovery and testing, developing a peer-reviewed pipeline to
+            ensure high-quality software contributions, and documenting best practices based on community-driven
+            standards. </p>
+    </div>
+
+    <div class="centered-block">
+        <p class="centered-text">OpenOcean.software needs your help!  Please fill out this form to schedule
+        an interview so you can share your insight and experience with the project team.</p>
+        <a class="centered-link" href="https://forms.gle/fm2DiyTU8z84ZSaK7">Sign up for an interview</a>
+    </div>
+
+</div>
 </body>
 </html>
