@@ -1,0 +1,30 @@
+site_name: Open Ocean Software
+site_url: https://oceansoft.org
+theme:
+  name: material
+  palette:
+    primary: blue grey
+    accent: indigo
+  font:
+    text: "Lora"
+  logo: assets/openocean-logo-no-text.svg
+
+  features:
+    - announce.dismiss
+  favicon: assets/favicon.png
+
+markdown_extensions:
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+  
+extra:
+  social:
+    - icon: fontawesome/brands/discourse
+      link: https://forum.oceansoft.org
+    - icon: fontawesome/brands/github
+      link: https://github.com/openocean-software/
+  generator: false
+
