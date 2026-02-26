@@ -12,6 +12,11 @@ We will **grow the community** through live events and online forums.
 
 Our **impacts will be broad**, supporting diverse projects that directly focus on the world’s key issues (e.g., climate, fisheries, defense, energy).
 
+!!! info "Community Survey — We Want Your Input"
+    We're gathering input from the maritime robotics community to shape our priorities around software tools, interoperability, and community infrastructure.
+    Whether you use ROS, MOOS-IvP, Goby, or something else — **your perspective matters.**
+
+    [Take the survey →](survey.md){ .md-button .md-button--primary }
 
 ## Highlights
 
