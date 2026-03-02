@@ -16,7 +16,7 @@ Our **impacts will be broad**, supporting diverse projects that directly focus o
     We're gathering input from the maritime robotics community to shape our priorities around software tools, interoperability, and community infrastructure.
     Whether you use ROS, MOOS-IvP, Goby, or something else — **your perspective matters.**
 
-    [Take the survey →](survey.md){ .md-button .md-button--primary }
+    [Take the survey →](ros-maritime-survey.md){ .md-button .md-button--primary }
 
 ## Highlights
 
