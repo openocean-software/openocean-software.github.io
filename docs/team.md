@@ -1,0 +1,12 @@
+# Team
+
+
+| Name | Roles | ORCID | Web | LinkedIn | GitHub |
+|------|-------|-------|-----|----------|--------|
+| Eric Gallimore  | PI, Maintainer for ROS-Acomms                        | [:fontawesome-brands-orcid:](https://orcid.org/0000-0001-6772-8707)   | [:fontawesome-solid-globe:](https://www.ericgallimore.com/)           |                 [:fontawesome-brands-linkedin:](https://www.linkedin.com/in/ericgallimore)                    | [:fontawesome-brands-github:](https://github.com/EricGallimore) | 
+| Toby Schneider  | co-PI, Team Lead, Maintainer for Goby/DCCL           | [:fontawesome-brands-orcid:](https://orcid.org/0009-0000-6795-0308)   | [:fontawesome-solid-globe:](https://gobysoft.org/people/toby/)                    |        [:fontawesome-brands-linkedin:](https://www.linkedin.com/in/toby-edwin-schneider)          | [:fontawesome-brands-github:](https://github.com/tsaubergine) | 
+| Hanu Singh      | co-PI, Governance                                    | [:fontawesome-brands-orcid:](https://orcid.org/0000-0002-4975-3244)   | [:fontawesome-solid-globe:](https://coe.northeastern.edu/people/singh-hanumant/)| [:fontawesome-brands-linkedin:](https://www.linkedin.com/in/hanu-singh-8370367)                     | [:fontawesome-brands-github:](https://github.com/hanumantsingh) | 
+| Mike Benjamin   | co-PI, co-Community Manager, Maintainer for MOOS-IvP | [:fontawesome-brands-orcid:](https://orcid.org/0000-0002-2520-6465)   | [:fontawesome-solid-globe:](https://meche.mit.edu/people/faculty/mikerb@mit.edu) |[:fontawesome-brands-linkedin:](https://www.linkedin.com/in/michael-benjamin-25850750/)             | [:fontawesome-brands-github:](https://github.com/mikerb) | 
+| Isaac Vandor    | co-Community Manager, Maintainer for WHOI-ROS        | [:fontawesome-brands-orcid:](https://orcid.org/0009-0004-9739-3134)   | [:fontawesome-solid-globe:](http://isaacvandor.com/)| [:fontawesome-brands-linkedin:](https://www.linkedin.com/in/isaacvandor/)               |  [:fontawesome-brands-github:](https://github.com/isaacvandor) | 
+| Dave Ford       | Industry Mentor                                      |    |         |  [:fontawesome-brands-linkedin:](https://www.linkedin.com/in/david-ford-63697/)   | [:fontawesome-brands-github:](https://github.com/submergedguy) | 
+| Dennis Giaya    | Project Standards                                    |    | [:fontawesome-solid-globe:](https://scholar.google.com/citations?user=1-jspVAAAAAJ&hl=en) || [:fontawesome-brands-github:](https://github.com/dgiaya) |

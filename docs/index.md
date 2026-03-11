@@ -1,6 +1,4 @@
-# Home
-
-## Introduction
+# Open Ocean Software
 
 Open Ocean Software is an [NSF Pathways to Enable Open-Source Ecosystems](https://www.nsf.gov/funding/initiatives/pathways-enable-open-source-ecosystems/about-pose) project focused on open-source in **marine robotics**: autonomous underwater and surface vehicles, moorings, drifters, and related technologies: sensors, data acquisition, simulation, and more.
 
