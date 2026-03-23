@@ -30,6 +30,8 @@ Project webpage: [https://goby.software](https://goby.software)
 
 Github: [https://github.com/GobySoft/goby3](https://github.com/GobySoft/goby3/)
 
+Badges: [![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/GobySoft/goby3/badge)](https://scorecard.dev/viewer/?uri=github.com/GobySoft/goby3)
+
 ### DCCL
 
 The Dynamic Compact Control Language (DCCL) is a language for marshalling (or roughly analogously: source encoding or compressing) object-based messages for extremely low throughput network links. Originally designed for commanding and retrieving data from autonomous underwater vehicles over acoustic modem links, DCCL has found additional uses in the robotics community (such as for sending messages over satellite or degraded land-based links). It is suitable for use when having a very small encoded message size is of much more importance than the speed of encoding and decoding these messages.
@@ -37,3 +39,5 @@ The Dynamic Compact Control Language (DCCL) is a language for marshalling (or ro
 Project webpage: [https://libdccl.org/4.0](https://libdccl.org/4.0/)
 
 Github: [https://github.com/GobySoft/dccl](https://github.com/GobySoft/dccl/)
+
+Badges: [![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/GobySoft/dccl/badge)](https://scorecard.dev/viewer/?uri=github.com/GobySoft/dccl)
