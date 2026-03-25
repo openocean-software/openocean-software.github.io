@@ -16,18 +16,29 @@ theme:
 nav:
     - Home: index.md
     - team.md
-    - member-projects.md
+    - Project Directory: directory/index.md
+    - Submit a Project: directory-submit/index.md
     - ros-maritime-survey.md
 
-  
+plugins:
+  - search
+  - macros:
+      include_yaml:
+        - data/projects.yml
+
 markdown_extensions:
 - attr_list
+- md_in_html
 - admonition
 - pymdownx.emoji:
     emoji_index: !!python/name:material.extensions.emoji.twemoji ""
     emoji_generator:
 
       !!python/name:material.extensions.emoji.to_svg ""
+
+extra_css:
+  - stylesheets/directory.css
+
 extra:
   social:
   - icon: fontawesome/brands/discourse

@@ -1,0 +1,30 @@
+/* Project Directory Card Styling */
+
+.project-card {
+  padding: 1rem 0;
+}
+
+/* Status icons */
+.status-active { color: #4caf50; }
+.status-maintained { color: #2196f3; }
+.status-archived { color: #9e9e9e; }
+.status-experimental { color: #ff9800; }
+
+/* Tags */
+.project-tag {
+  display: inline-block;
+  padding: 0.15rem 0.5rem;
+  margin: 0.1rem 0.15rem;
+  font-size: 0.75rem;
+  border-radius: 1rem;
+  background-color: var(--md-code-bg-color);
+  color: var(--md-code-fg-color);
+}
+
+/* Tighten button spacing in cards */
+.project-card .md-button {
+  margin-right: 0.5rem;
+  margin-bottom: 0.25rem;
+  font-size: 0.8rem;
+  padding: 0.4rem 0.8rem;
+}

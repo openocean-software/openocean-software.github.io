@@ -1,0 +1,97 @@
+# OpenOcean.Software Project Directory Data
+# -----------------------------------------
+# To add a project, add an entry to this file following the schema below.
+# See docs/directory-submit/index.md for contribution instructions.
+#
+# Required fields: name, description, repo_url, category, license, status
+# Optional fields: docs_url, website_url, middleware, languages, tags,
+#                  maintainer_org, maintainer_contact, openssf_scorecard,
+#                  ros_distros, platforms, last_verified
+
+projects:
+
+  - name: "MOOS-IvP"
+    description: >
+      Open source C++ modules for providing autonomy on robotic platforms,
+      in particular autonomous marine vehicles. Includes the IvP Helm
+      behavior-based autonomy system and the MOOS middleware.
+    repo_url: "https://github.com/moos-ivp"
+    website_url: "https://oceanai.mit.edu/moos-ivp"
+    docs_url: "https://oceanai.mit.edu/moos-ivp/pmwiki/pmwiki.php"
+    category: "autonomy"
+    middleware: ["MOOS"]
+    languages: ["C++"]
+    license: "GPL-3.0"
+    status: "active"
+    maintainer_org: "MIT"
+    tags: ["autonomy", "path-planning", "behavior-based", "AUV", "USV"]
+    platforms: ["Linux"]
+    last_verified: "2025-03"
+
+  - name: "Goby3"
+    description: >
+      Unified framework for autonomous marine vehicle collaboration with
+      nested intervehicle, interprocess, and interthread communications.
+    repo_url: "https://github.com/GobySoft/goby3"
+    website_url: "https://goby.software"
+    docs_url: "https://goby.software/3.0/"
+    category: "middleware"
+    middleware: ["Goby"]
+    languages: ["C++"]
+    license: "LGPL-3.0"
+    status: "active"
+    maintainer_org: "GobySoft"
+    openssf_scorecard: "https://scorecard.dev/viewer/?uri=github.com/GobySoft/goby3"
+    tags: ["middleware", "acoustic-comms", "interprocess", "nested-comms"]
+    platforms: ["Linux"]
+    last_verified: "2025-03"
+
+  - name: "DCCL"
+    description: >
+      Dynamic Compact Control Language for marshalling object-based messages
+      over extremely low throughput network links. Originally designed for
+      acoustic modem links, suitable for satellite and degraded links.
+    repo_url: "https://github.com/GobySoft/dccl"
+    website_url: "https://libdccl.org/4.0/"
+    docs_url: "https://libdccl.org/4.0/"
+    category: "communications"
+    middleware: ["Goby"]
+    languages: ["C++"]
+    license: "LGPL-3.0"
+    status: "active"
+    maintainer_org: "GobySoft"
+    openssf_scorecard: "https://scorecard.dev/viewer/?uri=github.com/GobySoft/dccl"
+    tags: ["acoustic-comms", "message-encoding", "low-bandwidth", "marshalling"]
+    platforms: ["Linux"]
+    last_verified: "2025-03"
+
+  - name: "WHOI-ROS"
+    description: >
+      Collection of shared ROS 2 software libraries and tools developed by
+      Woods Hole Oceanographic Institution for underwater vehicle operations.
+      Next-generation evolution of the DS_ROS framework.
+    repo_url: "https://git.whoi.edu/whoi-ros"
+    category: "vehicle-software"
+    middleware: ["ROS 2"]
+    languages: ["C++", "Python"]
+    license: "BSD-3-Clause"
+    status: "active"
+    maintainer_org: "WHOI"
+    tags: ["ROV", "AUV", "deep-submergence", "vehicle-control", "NDSF"]
+    platforms: ["Linux"]
+    last_verified: "2025-03"
+
+  - name: "ros_acomms"
+    description: >
+      ROS message transport over underwater acoustic links using the WHOI
+      Micromodem. Implements TDMA protocol for multi-asset acoustic networking.
+    repo_url: "https://git.whoi.edu/acomms/ros_acomms"
+    category: "communications"
+    middleware: ["ROS 2"]
+    languages: ["C++", "Python"]
+    license: "BSD-3-Clause"
+    status: "active"
+    maintainer_org: "WHOI"
+    tags: ["acoustic-comms", "ROS", "TDMA", "micromodem", "networking"]
+    platforms: ["Linux"]
+    last_verified: "2025-03"
