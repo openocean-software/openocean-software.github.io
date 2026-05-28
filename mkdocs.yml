@@ -6,7 +6,7 @@ theme:
     primary: blue grey
     accent: indigo
   font:
-    text: "Lora"
+    text: "Figtree"
   logo: assets/openocean-logo-no-text.svg
 
   features:
