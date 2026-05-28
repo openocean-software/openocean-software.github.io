@@ -26,7 +26,7 @@ We are interested in a wide range of topics that both include open source softwa
 
 You do not need to be an author of the OSS project to present how it has been useful (or not) to your application. Also, we are interested in learning from **failures,** **false starts,** and **critiques** as much as successes.
 
-[Submit an abstract](https://docs.google.com/forms/d/e/1FAIpQLSfm2DL6R7pZMTaPGviGEcy3zN4sT9F4SEc9LASZspLLfZYNTw/viewform?usp=dialog){ .md-button .md-button--primary }
+[Submit an abstract](https://docs.google.com/forms/d/e/1FAIpQLSeKM_4OWoI-NgkwtG3wg7mKD3TE-ZCCACcrUPujECtaDRXSeg/viewform?usp=publish-editor){ .md-button .md-button--primary }
 
 
 ## Agenda
@@ -42,7 +42,7 @@ A full agenda will be posted after abstract selection. The preliminary schedule 
 
 ### Lunch (12:00-13:30)
 
-Lunch on your own.
+Lunch (cost not included) at the NOC cafeteria.
 
 ### Afternoon session [community discussion] (13:30-16:30)
 
@@ -51,22 +51,42 @@ Lunch on your own.
 - 15:00-16:00: Keynote followed by panel discussion on Open Ocean Software Member project standards (security, documentation, and licensing).
 - 16:00-16:30: Wrap-up and final discussion
 
+Following the event, all are welcome to continue discussions at a local pub.
+
 ## Registration
 
-Registration will be £40 for attendees with a reduced rate of £25 for students and early-career professionals (no more than 5 years from graduation). Attendance will be capped due to available space so please register early. Early bird registrations before 31 July 2026 will cost £5 less.
+Registration fees are inclusive of both coffee breaks but not lunch.
+
+| Category                              | Cost  |
+| ------------------------------------- | ----- |
+| Early Bird - Regular (before 31 July) | £35   |
+| Early Bird - Student/Early Career (before 31 July)     | £20   |
+| Regular (after 31 July)               | £40   |
+| Student/Early Career  (after 31 July) | £25   |
+
+Attendance will be capped due to available space so please register early.
 
 [Register](https://events.humanitix.com/open-ocean-software-community-day-uk-4-september-2026){ .md-button .md-button--primary }
 
 
 ## Key Dates
 
-- 10 July 2026: Abstract deadline
+- **10 July 2026: Abstract deadline**
 - 24 July 2026: Authors notified
 - 31 July 2026: Early bird registration deadline
 - [1-3 September 2026: IEEE OES AUV 2026]
 - *4 September 2026: Open Ocean Software Community Day!*
 
+## Want to stay informed?
+
+Would you like to be reminded by email of key updates to this event or notifications for new ones?
+
+[Sign up](https://forum.oceansoft.org/signup) for our forum, go to the [News and Events](https://forum.oceansoft.org/c/news/24) category, click the bell :material-bell-outline: icon in the upper right and choose "Watching".
+
+![](assets/forum-events-watching-ss.png)
+
 
 ## Questions?
 
-Post on the [forum](https://forum.oceansoft.org/c/news/24) or email [events@oceansoft.org](mailto:events@oceansoft.org).
+Email [events@oceansoft.org](mailto:events@oceansoft.org).
+
