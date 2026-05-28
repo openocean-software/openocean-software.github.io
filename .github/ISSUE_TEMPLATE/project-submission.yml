@@ -1,0 +1,112 @@
+name: "Submit a Project to the Directory"
+description: "Add an open-source marine robotics project to the OpenOcean.Software directory"
+title: "[Directory Submission] "
+labels: ["directory-submission"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for submitting a project! We'll review and add it to the directory.
+
+  - type: input
+    id: name
+    attributes:
+      label: Project Name
+      placeholder: "e.g., My AUV Navigation Package"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: "1-3 sentences about what the project does"
+      placeholder: "A brief description of the project's purpose and capabilities..."
+    validations:
+      required: true
+
+  - type: input
+    id: repo_url
+    attributes:
+      label: Repository URL
+      placeholder: "https://github.com/org/project"
+    validations:
+      required: true
+
+  - type: input
+    id: website_url
+    attributes:
+      label: Project Website (optional)
+      placeholder: "https://myproject.org"
+
+  - type: input
+    id: docs_url
+    attributes:
+      label: Documentation URL (optional)
+      placeholder: "https://myproject.org/docs"
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options:
+        - autonomy
+        - middleware
+        - communications
+        - vehicle-software
+        - simulation
+        - navigation
+        - sensors
+        - data-management
+        - visualization
+        - devops
+        - other
+    validations:
+      required: true
+
+  - type: input
+    id: middleware
+    attributes:
+      label: Middleware / Framework
+      description: "Comma-separated if multiple"
+      placeholder: "e.g., ROS 2, MOOS"
+
+  - type: input
+    id: languages
+    attributes:
+      label: Programming Languages
+      description: "Comma-separated"
+      placeholder: "e.g., C++, Python"
+
+  - type: input
+    id: license
+    attributes:
+      label: License (SPDX identifier)
+      placeholder: "e.g., MIT, BSD-3-Clause, GPL-3.0, Apache-2.0"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: status
+    attributes:
+      label: Project Status
+      options:
+        - active
+        - maintained
+        - archived
+        - experimental
+    validations:
+      required: true
+
+  - type: input
+    id: maintainer_org
+    attributes:
+      label: Maintaining Organization (optional)
+      placeholder: "e.g., WHOI, MIT, GobySoft"
+
+  - type: input
+    id: tags
+    attributes:
+      label: Tags (optional)
+      description: "Comma-separated keywords"
+      placeholder: "e.g., AUV, acoustic-comms, SLAM, deep-sea"

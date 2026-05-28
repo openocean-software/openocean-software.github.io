@@ -1,0 +1,123 @@
+/* ============================================================
+   Open Ocean Software — Directory & Site Typography Styles
+   ============================================================ */
+
+/* Bricolage Grotesque for headings — variable-width grotesque,
+   distinct from Inter/DM Sans/Space Grotesk defaults.
+   Figtree loaded as body font via mkdocs.yml font.text setting. */
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wdth,wght@75..100,200..800&display=swap');
+
+/* ─── Heading typography ────────────────────────────────────── */
+
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3,
+.md-typeset h4 {
+  font-family: 'Bricolage Grotesque', 'Figtree', sans-serif;
+  font-variation-settings: 'wdth' 90;
+  letter-spacing: -0.025em;
+  font-weight: 750;
+}
+
+/* ─── Project cards ─────────────────────────────────────────── */
+
+.project-card {
+  padding: 1.25rem 1.5rem 1rem;
+  margin: 0.5rem 0 1.25rem;
+  background: oklch(97.8% 0.006 195);
+  border: 1px solid oklch(89% 0.015 195);
+  border-radius: 8px;
+  transition: border-color 0.18s;
+}
+
+.project-card:hover {
+  border-color: oklch(76% 0.04 195);
+}
+
+.project-card > h3 {
+  margin-top: 0;
+  margin-bottom: 0.6rem;
+  font-size: 1.05rem;
+  line-height: 1.3;
+}
+
+/* Description — the first plain paragraph in each card */
+.project-card > p:not(:has(.project-tag)):not(:has(.md-button)):not(:has(> strong:first-child)) {
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: var(--md-default-fg-color--light);
+  margin-bottom: 0.5rem;
+}
+
+/* Metadata paragraph — "**Category:** Autonomy · **Middleware:** ..." */
+.project-card > p:has(> strong:first-child) {
+  font-size: 0.8rem;
+  line-height: 1.9;
+  padding: 0.55rem 0.8rem;
+  background: oklch(95% 0.01 195);
+  border-radius: 5px;
+  margin: 0.5rem 0;
+}
+
+/* Bold labels within the metadata paragraph */
+.project-card > p:has(> strong:first-child) > strong {
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.055em;
+  color: oklch(40% 0.09 195);
+}
+
+/* ─── Tags ──────────────────────────────────────────────────── */
+
+.project-tag {
+  display: inline-block;
+  padding: 0.15rem 0.52rem;
+  margin: 0.1rem 0.12rem;
+  font-size: 0.72rem;
+  font-weight: 500;
+  border-radius: 2rem;
+  background: oklch(90.5% 0.04 195);
+  color: oklch(28% 0.09 195);
+}
+
+/* ─── Button row ────────────────────────────────────────────── */
+
+.project-card > p:has(.md-button) {
+  margin-top: 0.75rem;
+  margin-bottom: 0;
+}
+
+.project-card .md-button {
+  margin-right: 0.5rem;
+  margin-bottom: 0.25rem;
+  font-size: 0.78rem;
+  padding: 0.35rem 0.75rem;
+}
+
+/* First button (always the repo link) gets filled primary treatment */
+.project-card p:has(.md-button) .md-button:first-child {
+  background: oklch(33% 0.09 195) !important;
+  border-color: oklch(33% 0.09 195) !important;
+  color: #fff !important;
+  font-weight: 600;
+}
+
+.project-card p:has(.md-button) .md-button:first-child:hover {
+  background: oklch(26% 0.09 195) !important;
+  border-color: oklch(26% 0.09 195) !important;
+}
+
+/* ─── Status icons ──────────────────────────────────────────── */
+
+.status-active       { color: oklch(54% 0.19 145); }
+.status-maintained   { color: oklch(52% 0.17 240); }
+.status-archived     { color: oklch(58% 0.03 195); }
+.status-experimental { color: oklch(65% 0.19 62);  }
+
+/* ─── HR separators between cards ──────────────────────────── */
+
+.md-typeset hr {
+  border-color: oklch(92% 0.01 195);
+  margin: 0.25rem 0;
+}
