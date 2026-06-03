@@ -15,10 +15,10 @@ theme:
 
 nav:
     - Home: index.md
+    - Community Day UK, 4 Sep 2026: community-day-uk-2026.md
     - team.md
     - member-projects.md
-    - ros-maritime-survey.md
-
+    - Survey: ros-maritime-survey.md
   
 markdown_extensions:
 - attr_list
