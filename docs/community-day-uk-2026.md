@@ -5,9 +5,7 @@ Do you **develop**, **maintain** or **use** **open source software** (OSS) on yo
 
 Open Ocean Software would like to invite you to our **first community day** at the National Oceanography Centre in Southampton, UK, where you can expect **focused talks**, **in-depth discussions**, and plenty of time for **networking** in a single-track format. This is also your chance to have **early feedback** on the goals and implementation of the Open Ocean Software organization.
 
-<!--
 **Open Ocean Software** is a new initiative to **support building ecosystems** around OSS for marine robots to improve technical quality, security, maintainability, documentation, interoperability, and to build a vibrant human community around the topic. Open Ocean Software is led by a [team of collaborators](https://oceansoft.org/team/) who have collectively spent decades deploying AUVs in diverse real-world environments running a range of OSS projects. We are currently funded by the US National Science Foundation under the [Pathways to Enable Open-Source Ecosystems (POSE) initiative](https://www.nsf.gov/funding/initiatives/pathways-enable-open-source-ecosystems).
--->
 
 
 This workshop will take place on **Friday, 4 September 2026**, directly following the [IEEE OES AUV Symposium](https://www.auv2026-southampton.com/), also held in Southampton.
@@ -17,7 +15,7 @@ This workshop will take place on **Friday, 4 September 2026**, directly followin
 
 ## Call for Presentation Abstracts
 
-**We invite you to submit an abstract for a technical talk** using the link below. These abstracts will be reviewed by the technical committee and accepted papers will be included in one of these tracks:
+**We invite you to submit an abstract for a technical talk** using the link below. These abstracts will be reviewed by the technical committee and accepted talks will be included in one of these tracks:
 
 - **Lightning talk**: A very brief talk intended to introduce the audience to your topic for fruitful discussions later in the day and beyond.
 - **Standard talk**: A standard-length conference talk focusing on your development or use of open source in your marine robotics work.
@@ -49,9 +47,9 @@ Lunch (cost not included) at the NOC cafeteria.
 - 13:30-14:30: Keynote followed by panel discussion on Open Ocean Software Technical services (interoperability, simulation, DevOps/packaging, etc).
 - 14:30-15:00: Break (coffee provided)
 - 15:00-16:00: Keynote followed by panel discussion on Open Ocean Software Member project standards (security, documentation, and licensing).
-- 16:00-16:30: Wrap-up and final discussion
+- 16:00-16:10: Wrap-up
 
-Following the event, all are welcome to continue discussions at a local pub.
+**Following the event, all are welcome to continue discussions at a local pub.**
 
 ## Registration
 
@@ -59,12 +57,12 @@ Registration fees are inclusive of both coffee breaks but not lunch.
 
 | Category                              | Cost  |
 | ------------------------------------- | ----- |
-| Early Bird - Regular (before 31 July) | £35   |
-| Early Bird - Student/Early Career (before 31 July)     | £20   |
-| Regular (after 31 July)               | £40   |
-| Student/Early Career  (after 31 July) | £25   |
+| Early Bird - Regular (before 1 Aug 2026, 11:59 pm BST) | £35   |
+| Early Bird - Student/Early Career (before 1 Aug 2026, 11:59 pm BST)     | £20   |
+| Regular (after Early Bird deadline)               | £40   |
+| Student/Early Career  (after Early Bird deadline) | £25   |
 
-Attendance will be capped due to available space so please register early.
+Please register early so we can get accurate attendance numbers to plan accordingly. 
 
 [Register](https://events.humanitix.com/open-ocean-software-community-day-uk-4-september-2026){ .md-button .md-button--primary }
 
@@ -73,18 +71,19 @@ Attendance will be capped due to available space so please register early.
 
 - **10 July 2026: Abstract deadline**
 - 24 July 2026: Authors notified
-- 31 July 2026: Early bird registration deadline
-- [1-3 September 2026: IEEE OES AUV 2026]
+- 1 August 2026: Early bird registration deadline
+- [1-3 September 2026: [IEEE OES AUV 2026](https://www.auv2026-southampton.com/)]
 - *4 September 2026: Open Ocean Software Community Day!*
 
 ## Want to stay informed?
 
-Would you like to be reminded by email of key updates to this event or notifications for new ones?
+Would you like to be reminded by email of key updates to this event or notifications for new ones? Subscribe to our **infrequent** email newsletter:
 
-[Sign up](https://forum.oceansoft.org/signup) for our forum, go to the [News and Events](https://forum.oceansoft.org/c/news/24) category, click the bell :material-bell-outline: icon in the upper right and choose "Watching".
-
-![](assets/forum-events-watching-ss.png)
-
+<iframe
+  scrolling="no"
+  style="width:100%;height:220px;border:1px #ccc solid"
+  src="https://buttondown.com/openoceansoftware?as_embed=true"
+></iframe>
 
 ## Questions?
 

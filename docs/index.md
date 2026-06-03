@@ -23,7 +23,14 @@ Our **impacts will be broad**, supporting diverse projects that directly focus o
 
 :fontawesome-brands-github: For the source to this website and other projects, see our [Github page](https://github.com/orgs/openocean-software).
 
-## Latest News
+## Want to stay informed?
 
-Keep an eye on the latest news in marine robotics open-source software in our [forum news category](https://forum.oceansoft.org/c/news/24).
+Receive an email of key events and updates to our project by subscribing to our **infrequent** email newsletter:
 
+<iframe
+  scrolling="no"
+  style="width:100%;height:220px;border:1px #ccc solid"
+  src="https://buttondown.com/openoceansoftware?as_embed=true"
+></iframe>
+
+Also, keep an eye on the latest news in marine robotics open-source software in our [forum news category](https://forum.oceansoft.org/c/news/24).
