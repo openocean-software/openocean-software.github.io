@@ -69,7 +69,7 @@ Please register early so we can get accurate attendance numbers to plan accordin
 
 ## Key Dates
 
-- **10 July 2026: Abstract deadline**
+- **(EXTENDED) 17 July 2026: Abstract deadline**
 - 24 July 2026: Authors notified
 - 1 August 2026: Early bird registration deadline
 - [1-3 September 2026: [IEEE OES AUV 2026](https://www.auv2026-southampton.com/)]
