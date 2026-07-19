@@ -18,7 +18,7 @@ This workshop will take place on **Friday, 4 September 2026**, directly followin
 **We invite you to submit an abstract for a technical talk** using the link below. These abstracts will be reviewed by the technical committee and accepted talks will be included in one of these tracks:
 
 - **Lightning talk** [*no hard deadline: abstracts will be accepted until event reaches capacity*]: A very brief talk intended to introduce the audience to your topic for fruitful discussions later in the day and beyond.
-- **Standard talk** [*abstracts due 17 July*]: A standard-length conference talk focusing on your development or use of open source in your marine robotics work.
+- **Standard talk** [*CLOSED: abstracts were due 17 July*]: A standard-length conference talk focusing on your development or use of open source in your marine robotics work.
 
 We are interested in a wide range of topics that both include open source software, and applies to marine robots or related technologies: sensors, data acquisition, simulation, and more. 
 
@@ -69,8 +69,8 @@ Please register early so we can get accurate attendance numbers to plan accordin
 
 ## Key Dates
 
-- **(EXTENDED) 17 July 2026: Standard talk Abstract deadline**
-- 24 July 2026: Authors notified
+- 17 July 2026: Standard talk Abstract deadline [CLOSED] - **Lightning talks still accepted**
+- 29 July 2026: Authors notified for Standard talks
 - 1 August 2026: Early bird registration deadline
 - [1-3 September 2026: [IEEE OES AUV 2026](https://www.auv2026-southampton.com/)]
 - *4 September 2026: Open Ocean Software Community Day!*
