@@ -19,10 +19,13 @@ nav:
     - team.md
     - member-projects.md
     - Survey: ros-maritime-survey.md
+    - DevSecOps: devsecops.md
   
 markdown_extensions:
 - attr_list
 - admonition
+- pymdownx.details
+- pymdownx.superfences
 - pymdownx.emoji:
     emoji_index: !!python/name:material.extensions.emoji.twemoji ""
     emoji_generator:
