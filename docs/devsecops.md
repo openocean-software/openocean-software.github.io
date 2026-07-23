@@ -10,9 +10,13 @@ The configuration for this work is in the [openocean-build](https://github.com/o
 
 ## Apt Packages
 
+!!! warning "Trust"
+
+    These instructions assume oceansoft.org hasn't been compromised (and thus lists the correct GPG fingerprint: `OOS_KEY`). This is normally a safe assumption, but if your security requirements call for it, consider independently verifying [our signing key](#gpg-signing-public-key), e.g. using Keybase or other out-of-band techniques.
+
 For Debian stable/oldstable and Ubuntu active LTS releases:
 
-- Get the signing key ([details](#gpg-signing-public-key)) 
+- Get the signing key ([details](#gpg-signing-public-key)):
   ```
   OOS_KEY=D7D7224D53A4F29E303FE01DEB505B68A5D063B0
   OOS_KEYRING=/etc/apt/keyrings/oceansoft.gpg
@@ -26,7 +30,7 @@ For Debian stable/oldstable and Ubuntu active LTS releases:
   echo "deb [signed-by=$OOS_KEYRING] $REPO $DIST main" | sudo tee /etc/apt/sources.list.d/oceansoft.list
   sudo apt update
   ```
-- Install packages
+- Install packages:
   ```
   apt install ...
   ```
