@@ -85,6 +85,30 @@ Would you like to be reminded by email of key updates to this event or notificat
   src="https://buttondown.com/openoceansoftware?as_embed=true"
 ></iframe>
 
+
+## Sponsors
+
+**This event is hosted graciously by the [National Oceanography Centre](https://www.noc.ac.uk/)**.
+
+Financial support provided by the [U.S. National Science Foundation](https://www.nsf.gov/) and our corporate sponsors:
+
+<div class="sponsor-row" markdown>
+
+<div markdown>
+[![Jaia Robotics](assets/sponsors/jaia-logo.png){ style="height:65px;width:auto" }](https://jaia.tech/) / [:fontawesome-brands-github:](https://github.com/jaiarobotics/jaiabot)
+</div>
+
+<div markdown>
+[![JP Analytics](assets/sponsors/jp-analytics-logo.png){ style="height:65px;width:auto;" }](https://www.jpanalytics.com/)
+</div>
+
+<div markdown>
+[![Mission Systems](assets/sponsors/mission-systems-logo.png){ style="height:65px;width:auto;" }](https://www.missionsystems.com.au/) / [:fontawesome-brands-github:](https://github.com/mission-systems-pty-ltd/)
+</div>
+
+</div>
+
+
 ## Questions?
 
 Email [events@oceansoft.org](mailto:events@oceansoft.org).
