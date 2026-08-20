@@ -13,17 +13,6 @@ This workshop will take place on **Friday, 4 September 2026**, directly followin
 ![](assets/community-day26-auv-photo.jpg)
 
 
-## Sponsors
-
-Thank you to our sponsors for supporting Open Ocean Software Community Day UK!
-
-|   |   |   |
-| ---- | ------- | ------ |
-| [![Jaia Robotics](assets/sponsors/jaia-logo.png){ style="height:28px;width:auto;" }](https://jaia.tech/) | [Jaia Robotics](https://jaia.tech/) | [:fontawesome-brands-github:](https://github.com/jaiarobotics/jaiabot) |
-| [![Mission Systems](assets/sponsors/mission-systems-logo.png){ style="height:28px;width:auto;" }](https://www.missionsystems.com.au/) | [Mission Systems](https://www.missionsystems.com.au/) | [:fontawesome-brands-github:](https://github.com/mission-systems-pty-ltd/) |
-| [![JP Analytics](assets/sponsors/jp-analytics-logo.png){ style="height:28px;width:auto;" }](https://www.jpanalytics.com/) | [JP Analytics](https://www.jpanalytics.com/) | |
-
-
 ## Call for Presentation Abstracts
 
 **We invite you to submit an abstract for a technical talk** using the link below. These abstracts will be reviewed by the technical committee and accepted talks will be included in one of these tracks:
@@ -95,6 +84,30 @@ Would you like to be reminded by email of key updates to this event or notificat
   style="width:100%;height:220px;border:1px #ccc solid"
   src="https://buttondown.com/openoceansoftware?as_embed=true"
 ></iframe>
+
+
+## Sponsors
+
+**This event is hosted graciously by the [National Oceanography Centre](https://www.noc.ac.uk/)**.
+
+Financial support provided by the [U.S. National Science Foundation](https://www.nsf.gov/) and our corporate sponsors:
+
+<div class="sponsor-row" markdown>
+
+<div markdown>
+[![Jaia Robotics](assets/sponsors/jaia-logo.png){ style="height:65px;width:auto" }](https://jaia.tech/) / [:fontawesome-brands-github:](https://github.com/jaiarobotics/jaiabot)
+</div>
+
+<div markdown>
+[![JP Analytics](assets/sponsors/jp-analytics-logo.png){ style="height:65px;width:auto;" }](https://www.jpanalytics.com/)
+</div>
+
+<div markdown>
+[![Mission Systems](assets/sponsors/mission-systems-logo.png){ style="height:65px;width:auto;" }](https://www.missionsystems.com.au/) / [:fontawesome-brands-github:](https://github.com/mission-systems-pty-ltd/)
+</div>
+
+</div>
+
 
 ## Questions?
 
