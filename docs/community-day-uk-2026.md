@@ -13,6 +13,17 @@ This workshop will take place on **Friday, 4 September 2026**, directly followin
 ![](assets/community-day26-auv-photo.jpg)
 
 
+## Sponsors
+
+Thank you to our sponsors for supporting Open Ocean Software Community Day UK!
+
+| Logo | Company | GitHub |
+| ---- | ------- | ------ |
+| [![Jaia Robotics](assets/sponsors/jaia-logo.png){ height="60" }](https://jaia.tech/) | [Jaia Robotics](https://jaia.tech/) | [:fontawesome-brands-github:](https://github.com/jaiarobotics/jaiabot) |
+| [![Mission Systems](assets/sponsors/mission-systems-logo.png){ height="60" }](https://www.missionsystems.com.au/) | [Mission Systems](https://www.missionsystems.com.au/) | [:fontawesome-brands-github:](https://github.com/mission-systems-pty-ltd/) |
+| | [JP Analytics](https://www.jpanalytics.com/) | |
+
+
 ## Call for Presentation Abstracts
 
 **We invite you to submit an abstract for a technical talk** using the link below. These abstracts will be reviewed by the technical committee and accepted talks will be included in one of these tracks:
