@@ -17,11 +17,11 @@ This workshop will take place on **Friday, 4 September 2026**, directly followin
 
 Thank you to our sponsors for supporting Open Ocean Software Community Day UK!
 
-| Logo | Company | GitHub |
+|   |   |   |
 | ---- | ------- | ------ |
-| [![Jaia Robotics](assets/sponsors/jaia-logo.png){ height="60" }](https://jaia.tech/) | [Jaia Robotics](https://jaia.tech/) | [:fontawesome-brands-github:](https://github.com/jaiarobotics/jaiabot) |
-| [![Mission Systems](assets/sponsors/mission-systems-logo.png){ height="60" }](https://www.missionsystems.com.au/) | [Mission Systems](https://www.missionsystems.com.au/) | [:fontawesome-brands-github:](https://github.com/mission-systems-pty-ltd/) |
-| [![JP Analytics](assets/sponsors/jp-analytics-logo.png){ height="60" }](https://www.jpanalytics.com/) | [JP Analytics](https://www.jpanalytics.com/) | |
+| [![Jaia Robotics](assets/sponsors/jaia-logo.png){ height="28" }](https://jaia.tech/) | [Jaia Robotics](https://jaia.tech/) | [:fontawesome-brands-github:](https://github.com/jaiarobotics/jaiabot) |
+| [![Mission Systems](assets/sponsors/mission-systems-logo.png){ height="28" }](https://www.missionsystems.com.au/) | [Mission Systems](https://www.missionsystems.com.au/) | [:fontawesome-brands-github:](https://github.com/mission-systems-pty-ltd/) |
+| [![JP Analytics](assets/sponsors/jp-analytics-logo.png){ height="28" }](https://www.jpanalytics.com/) | [JP Analytics](https://www.jpanalytics.com/) | |
 
 
 ## Call for Presentation Abstracts
