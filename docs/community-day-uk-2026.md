@@ -21,7 +21,7 @@ Thank you to our sponsors for supporting Open Ocean Software Community Day UK!
 | ---- | ------- | ------ |
 | [![Jaia Robotics](assets/sponsors/jaia-logo.png){ height="60" }](https://jaia.tech/) | [Jaia Robotics](https://jaia.tech/) | [:fontawesome-brands-github:](https://github.com/jaiarobotics/jaiabot) |
 | [![Mission Systems](assets/sponsors/mission-systems-logo.png){ height="60" }](https://www.missionsystems.com.au/) | [Mission Systems](https://www.missionsystems.com.au/) | [:fontawesome-brands-github:](https://github.com/mission-systems-pty-ltd/) |
-| | [JP Analytics](https://www.jpanalytics.com/) | |
+| [![JP Analytics](assets/sponsors/jp-analytics-logo.png){ height="60" }](https://www.jpanalytics.com/) | [JP Analytics](https://www.jpanalytics.com/) | |
 
 
 ## Call for Presentation Abstracts
