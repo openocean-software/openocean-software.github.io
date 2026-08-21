@@ -1,5 +1,23 @@
 # Open Ocean Software Community Day UK: 4 September 2026 
 
+!!! info "Updates"
+    The draft detailed Agenda is now live. The final program will be posted during the week of the event, and a paper copy will be provided at registration. **We want to hear from all of you**: 5-minute lighting talk abstracts are still accepted - use the link below or email to events@oceansoft.org.
+
+    [Download Agenda PDF](assets/community-day26-uk/oceansoft-community-day-uk26-draft1.pdf){ .md-button .md-button--primary } [Register](https://events.humanitix.com/open-ocean-software-community-day-uk-4-september-2026){ .md-button .md-button--primary } [Submit an lightning talk abstract](https://docs.google.com/forms/d/e/1FAIpQLSeKM_4OWoI-NgkwtG3wg7mKD3TE-ZCCACcrUPujECtaDRXSeg/viewform?usp=publish-editor){ .md-button .md-button--primary }
+
+
+## Agenda
+
+Agenda at a glance (download the full agenda using the button above):
+
+- 8:30-9:00: Registration at NOC main reception (coffee available)
+- 9:00-12:00: Morning session [technical program] (with morning coffee break)
+- 12:00-13:30: Lunch on your own (reserved area available at NOC cafeteria)
+- 13:30-16:10: Afternoon session [community discussion] (with afternoon coffee break)
+
+## Overview
+
+![](assets/community-day26-auv-photo.jpg)
 
 Do you **develop**, **maintain** or **use** **open source software** (OSS) on your AUVs, ASVs, ROVs, etc.?
 
@@ -10,7 +28,6 @@ Open Ocean Software would like to invite you to our **first community day** at t
 
 This workshop will take place on **Friday, 4 September 2026**, directly following the [IEEE OES AUV Symposium](https://www.auv2026-southampton.com/), also held in Southampton.
 
-![](assets/community-day26-auv-photo.jpg)
 
 
 ## Call for Presentation Abstracts
@@ -25,31 +42,6 @@ We are interested in a wide range of topics that both include open source softwa
 **You do not need to be an author of the OSS project** to present how it has been useful (or not) to your application. Also, we are interested in learning from **failures,** **false starts,** and **critiques** as much as successes.
 
 [Submit an abstract](https://docs.google.com/forms/d/e/1FAIpQLSeKM_4OWoI-NgkwtG3wg7mKD3TE-ZCCACcrUPujECtaDRXSeg/viewform?usp=publish-editor){ .md-button .md-button--primary }
-
-
-## Agenda
-
-A full agenda will be posted after abstract selection. The preliminary schedule is follows:
-
-### Morning session [technical program] (9:00-12:00)
-
-- 9:00-9:15: Open Ocean Software: Introduction
-- 9:15-10:30: Technical Session 1: Lightning talk track
-- 10:30-11:00: Break (coffee provided)
-- 11:00-12:00: Technical Session 2: Standard talk track
-
-### Lunch (12:00-13:30)
-
-Lunch (cost not included) at the NOC cafeteria.
-
-### Afternoon session [community discussion] (13:30-16:30)
-
-- 13:30-14:30: Keynote followed by panel discussion on Open Ocean Software Technical services (interoperability, simulation, DevOps/packaging, etc).
-- 14:30-15:00: Break (coffee provided)
-- 15:00-16:00: Keynote followed by panel discussion on Open Ocean Software Member project standards (security, documentation, and licensing).
-- 16:00-16:10: Wrap-up
-
-**Following the event, all are welcome to continue discussions at a local pub.**
 
 ## Registration
 
