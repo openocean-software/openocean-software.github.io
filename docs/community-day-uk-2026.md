@@ -3,7 +3,7 @@
 !!! info "Updates"
     The draft detailed Agenda is now live. The final program will be posted during the week of the event, and a paper copy will be provided at registration. **We want to hear from all of you**: 5-minute lighting talk abstracts are still accepted - use the link below or email to events@oceansoft.org.
 
-    [Download Agenda PDF](assets/community-day26-uk/oceansoft-community-day-uk26-draft2.pdf){ .md-button .md-button--primary } [Register](https://events.humanitix.com/open-ocean-software-community-day-uk-4-september-2026){ .md-button .md-button--primary } [Submit an lightning talk abstract](https://docs.google.com/forms/d/e/1FAIpQLSeKM_4OWoI-NgkwtG3wg7mKD3TE-ZCCACcrUPujECtaDRXSeg/viewform?usp=publish-editor){ .md-button .md-button--primary }
+    [Download Agenda PDF](assets/community-day26-uk/oceansoft-community-day-uk26-draft3.pdf){ .md-button .md-button--primary } [Register](https://events.humanitix.com/open-ocean-software-community-day-uk-4-september-2026){ .md-button .md-button--primary } [Submit an lightning talk abstract](https://docs.google.com/forms/d/e/1FAIpQLSeKM_4OWoI-NgkwtG3wg7mKD3TE-ZCCACcrUPujECtaDRXSeg/viewform?usp=publish-editor){ .md-button .md-button--primary }
 
 
 ## Agenda
