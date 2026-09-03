@@ -12,14 +12,8 @@ Our **impacts will be broad**, supporting diverse projects that directly focus o
 
 ## Highlights
 
-!!! info "Community Day UK"
-    We're hosting a **full-day in-person workshop** right after IEEE OES AUV in Southampton, UK on 4 September 2026 and we'd love to see you there and hear your ideas!
-
-    [Details on the UK Community Day →](community-day-uk-2026.md){ .md-button .md-button--primary }
-
-
 !!! info "Town Hall at OCEANS26 Monterey"
-    We are running a **Town Hall w/ expert panel**: "Future directions in Open Source for the Ocean" as part of the OCEANS 2026 Monterey Technical Program. If you'll be at OCEANS please come and share your thoughts!
+    We are running a **Town Hall w/ expert panel**: "Future directions in Open Source for the Ocean" as part of the OCEANS 2026 Monterey Technical Program (Wed 23 September: 8:30 AM - 10:00 AM). If you'll be at OCEANS please come and share your thoughts!
 
     [Details on the OCEANS26 Town Hall →](https://monterey26.oceansconference.org/town-halls-2026/#3d43e3378637c32a6){ .md-button .md-button--primary }
 
