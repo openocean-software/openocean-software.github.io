@@ -1,9 +1,9 @@
 # Open Ocean Software Community Day UK: 4 September 2026 
 
 !!! info "Updates"
-    The draft detailed Agenda is now live. The final program will be posted during the week of the event, and a paper copy will be provided at registration. **We want to hear from all of you**: 5-minute lighting talk abstracts are still accepted - use the link below or email to events@oceansoft.org.
+    The final detailed Agenda can be downloaded here, and a paper copy will be provided at registration. 
 
-    [Download Agenda PDF](assets/community-day26-uk/oceansoft-community-day-uk26-draft3.pdf){ .md-button .md-button--primary } [Register](https://events.humanitix.com/open-ocean-software-community-day-uk-4-september-2026){ .md-button .md-button--primary } [Submit an lightning talk abstract](https://docs.google.com/forms/d/e/1FAIpQLSeKM_4OWoI-NgkwtG3wg7mKD3TE-ZCCACcrUPujECtaDRXSeg/viewform?usp=publish-editor){ .md-button .md-button--primary }
+    [Download Agenda PDF](assets/community-day26-uk/oceansoft-community-day-uk26.pdf){ .md-button .md-button--primary }
 
 
 ## Agenda
@@ -34,14 +34,12 @@ This workshop will take place on **Friday, 4 September 2026**, directly followin
 
 **We invite you to submit an abstract for a technical talk** using the link below. These abstracts will be reviewed by the technical committee and accepted talks will be included in one of these tracks:
 
-- **Lightning talk** [*no hard deadline: abstracts will be accepted until event reaches capacity*]: A very brief talk intended to introduce the audience to your topic for fruitful discussions later in the day and beyond.
+- **Lightning talk** [*CLOSED*]: A very brief talk intended to introduce the audience to your topic for fruitful discussions later in the day and beyond.
 - **Standard talk** [*CLOSED: abstracts were due 17 July*]: A standard-length conference talk focusing on your development or use of open source in your marine robotics work.
 
 We are interested in a wide range of topics that both include open source software, and applies to marine robots or related technologies: sensors, data acquisition, simulation, and more. 
 
 **You do not need to be an author of the OSS project** to present how it has been useful (or not) to your application. Also, we are interested in learning from **failures,** **false starts,** and **critiques** as much as successes.
-
-[Submit an abstract](https://docs.google.com/forms/d/e/1FAIpQLSeKM_4OWoI-NgkwtG3wg7mKD3TE-ZCCACcrUPujECtaDRXSeg/viewform?usp=publish-editor){ .md-button .md-button--primary }
 
 ## Registration
 
@@ -56,12 +54,10 @@ Registration fees are inclusive of both coffee breaks but not lunch.
 
 Please register early so we can get accurate attendance numbers to plan accordingly. 
 
-[Register](https://events.humanitix.com/open-ocean-software-community-day-uk-4-september-2026){ .md-button .md-button--primary }
-
 
 ## Key Dates
 
-- 17 July 2026: Standard talk Abstract deadline [CLOSED] - **Lightning talks still accepted**
+- 17 July 2026: Standard talk Abstract deadline [CLOSED]
 - 29 July 2026: Authors notified for Standard talks
 - 1 August 2026: Early bird registration deadline
 - [1-3 September 2026: [IEEE OES AUV 2026](https://www.auv2026-southampton.com/)]
