@@ -15,12 +15,13 @@ theme:
 
 nav:
     - Home: index.md
-    - Community Day UK, 4 Sep 2026: community-day-uk-2026.md
     - team.md
+    - Forum: https://forum.oceansoft.org
     - member-projects.md
     - Survey: ros-maritime-survey.md
     - DevSecOps: devsecops.md
-  
+    - Community Day UK, 4 Sep 2026: community-day-uk-2026.md
+
 markdown_extensions:
 - attr_list
 - md_in_html
