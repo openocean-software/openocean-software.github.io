@@ -1,0 +1,7 @@
+.sponsor-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* stacks gracefully on narrow screens */
+  gap: 1rem;
+}
