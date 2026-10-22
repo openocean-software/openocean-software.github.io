@@ -3,6 +3,11 @@ on:
   push:
     branches:
       - main
+  # Nightly rebuild so the home page forum list and upcoming/recent events
+  # stay current between content pushes.
+  schedule:
+    - cron: "17 6 * * *"
+  workflow_dispatch:
 permissions:
   contents: write
 jobs:
@@ -24,6 +29,6 @@ jobs:
           path: ~/.cache 
           restore-keys: |
             mkdocs-material-
-      - run: pip install mkdocs-material 
+      - run: pip install -r requirements.txt
       - run: mkdocs gh-deploy --force
   
