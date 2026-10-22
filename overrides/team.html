@@ -1,0 +1,29 @@
+{#-
+  Team page (team.md), rendered from data/team.yml so the home page crew
+  strip and this page can't drift apart.
+-#}
+{% extends "main.html" %}
+
+{% set profiles = [
+  ("orcid", "fontawesome/brands/orcid", "ORCID"),
+  ("web", "fontawesome/solid/globe", "Website"),
+  ("linkedin", "fontawesome/brands/linkedin", "LinkedIn"),
+  ("github", "fontawesome/brands/github", "GitHub"),
+] %}
+
+{% block content %}
+  {{ page.content }}
+  <ul class="oo-team">
+    {% for m in config.extra.team %}
+      <li class="oo-panel">
+        <h2>{{ m.name }}</h2>
+        <p>{{ m.role }}</p>
+        <div class="oo-team__links">
+          {% for key, icon, label in profiles if m[key] %}
+            <a href="{{ m[key] }}" aria-label="{{ label }}: {{ m.name }}" title="{{ label }}">{% include ".icons/" ~ icon ~ ".svg" %}</a>
+          {% endfor %}
+        </div>
+      </li>
+    {% endfor %}
+  </ul>
+{% endblock %}

@@ -1,0 +1,103 @@
+{#-
+  Member project page (projects/<slug>.md). The front matter names the
+  project (`project: <slug>`); the header, facts panel and standards
+  checklist come from data/projects.yml, and the page's own Markdown
+  (install steps, packages, bridges) fills the main column.
+-#}
+{% extends "main.html" %}
+
+{% set p = (config.extra.projects | selectattr("slug", "equalto", page.meta.project) | list | first) %}
+
+{# Labels follow openocean-plan/member-projects/guidelines: four
+   documentation minimums and four maintainability minimums. #}
+{% set doc_minimums = [
+  ("purpose", "Purpose"),
+  ("usage", "Usage example"),
+  ("interface", "Interface"),
+  ("assumptions", "Assumptions and constraints"),
+] %}
+{% set maint_minimums = [
+  ("build", "Build reproducibility"),
+  ("contracts", "Interface contracts"),
+  ("verified", "Verified behavior"),
+  ("issues", "Issue visibility"),
+] %}
+{% set stage_labels = {"pond": "Pond", "explorer": "Explorer", "estuary": "Estuary", "bay": "Bay", "ocean": "Ocean"} %}
+
+{% block content %}
+  <nav class="oo-breadcrumb" aria-label="Breadcrumb"><a href="{{ 'projects/' | url }}">Projects</a> / <span aria-current="page">{{ p.name }}</span></nav>
+  <header class="oo-project__head">
+    <div class="oo-chips">
+      <span class="oo-eyebrow">{{ p.category }}</span>
+      <span class="oo-kind">{{ "Member" if p.kind == "member" else "Open Ocean" }}</span>
+      {% for t in p.tags or [] %}<span class="oo-chip">{{ t }}</span>{% endfor %}
+      {% if p.apt_packages %}<span class="oo-chip oo-chip--solid">apt package</span>{% endif %}
+      {% if p.stage %}<span class="oo-chip">Stage: {{ stage_labels[p.stage] }}</span>{% endif %}
+    </div>
+    <h1>{{ p.name }}</h1>
+    <p class="oo-lede">{{ p.summary }}</p>
+    <div class="oo-actions">
+      {% if p.apt_packages %}<a class="oo-button oo-button--accent" href="#install">Install with apt</a>{% endif %}
+      {% for l in p.links or [] %}<a class="oo-button oo-button--outline" href="{{ l.url }}">{{ l.label }}</a>{% endfor %}
+      <a class="oo-more" href="{{ config.extra.forum_url }}">Discuss on the forum →</a>
+    </div>
+  </header>
+
+  <div class="oo-project">
+    <div class="oo-project__main">
+      {{ page.content }}
+
+      <h2 id="standards">Member standards</h2>
+      <p>Every member project meets four documentation and four maintainability minimums. Reviewers link the evidence here so users can judge fit at a glance.{% if p.badge %} Maintainability badge: <strong>{{ p.badge | capitalize }}-Grade</strong>.{% endif %}</p>
+      <div class="oo-standards">
+        {% for title, items in [("Documentation", doc_minimums), ("Maintainability", maint_minimums)] %}
+          <div class="oo-panel">
+            <h3>{{ title }}</h3>
+            <ul>
+              {% for key, label in items %}
+                {% set url = (p.standards or {}).get(key) %}
+                <li><span>{{ label }}</span>{% if url %}<a href="{{ url }}">Evidence</a>{% else %}<span class="oo-meta">Not yet reviewed</span>{% endif %}</li>
+              {% endfor %}
+            </ul>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <aside class="oo-project__aside" aria-label="Project facts">
+      <div class="oo-panel oo-panel--band">
+        <h2>At a glance</h2>
+        <dl class="oo-facts">
+          <dt>Maintainer</dt><dd>{{ p.maintainer }}{% if p.affiliation %}, {{ p.affiliation }}{% endif %}</dd>
+          {% if p.language %}<dt>Language</dt><dd>{{ p.language }}</dd>{% endif %}
+          {% if p.middleware %}<dt>Middleware</dt><dd>{{ p.middleware }}</dd>{% endif %}
+          {% if p.license %}<dt>License</dt><dd>{{ p.license }}</dd>{% endif %}
+          {% if p.apt_packages %}<dt>Packages</dt><dd>Debian, Ubuntu</dd>{% endif %}
+          {% if p.latest_release %}<dt>Latest release</dt><dd>{{ p.latest_release }}</dd>{% endif %}
+          {% if p.issues %}<dt>Issues</dt><dd><a href="{{ p.issues }}">Tracker</a></dd>{% endif %}
+        </dl>
+      </div>
+      {% if p.apt_packages or p.scorecard %}
+        <div class="oo-panel">
+          <h2>Trust signals</h2>
+          {% if p.apt_packages %}
+            <div class="oo-meta">Package signing key</div>
+            <code class="oo-fingerprint">D7D7 224D 53A4 F29E 303F E01D EB50 5B68 A5D0 63B0</code>
+          {% endif %}
+          {% if p.scorecard %}
+            <div class="oo-meta">OpenSSF Scorecard</div>
+            <a href="https://scorecard.dev/viewer/?uri={{ p.scorecard }}"><img src="https://api.scorecard.dev/projects/{{ p.scorecard }}/badge" alt="OpenSSF Scorecard score for {{ p.name }}"></a>
+          {% endif %}
+        </div>
+      {% endif %}
+      <div class="oo-panel">
+        <h2>Get involved</h2>
+        <ul class="oo-linklist">
+          <li><a href="{{ config.extra.forum_url }}">Ask a question on the forum</a></li>
+          {% if p.issues %}<li><a href="{{ p.issues }}">Report an issue</a></li>{% endif %}
+          {% for l in p.links or [] %}<li><a href="{{ l.url }}">{{ l.label }}</a></li>{% endfor %}
+        </ul>
+      </div>
+    </aside>
+  </div>
+{% endblock %}

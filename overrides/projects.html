@@ -1,0 +1,35 @@
+{#-
+  Member project directory (projects/index.md). The page's Markdown renders
+  as normal; the card grid replaces the "[[directory]]" paragraph, so the
+  intro and the bridge table above and below it stay editable in Markdown.
+-#}
+{% extends "main.html" %}
+
+{% block content %}
+  {% set directory %}
+    <div class="oo-directory" data-oo-directory>
+      <div class="oo-directory__controls">
+        <div class="oo-directory__search">
+          <label for="oo-dir-search">Search the directory</label>
+          <input id="oo-dir-search" type="search" placeholder="Name, language, or capability" data-oo-search>
+        </div>
+        <div class="oo-directory__filters" role="group" aria-label="Filter by category">
+          <button type="button" class="oo-filter" aria-pressed="true" data-oo-filter="all">All</button>
+          <button type="button" class="oo-filter" aria-pressed="false" data-oo-filter="autonomy">Autonomy</button>
+          <button type="button" class="oo-filter" aria-pressed="false" data-oo-filter="middleware">Middleware and comms</button>
+          <button type="button" class="oo-filter" aria-pressed="false" data-oo-filter="ros">ROS 2</button>
+          <button type="button" class="oo-filter" aria-pressed="false" data-oo-filter="encoding">Encoding</button>
+          <button type="button" class="oo-filter" aria-pressed="false" data-oo-filter="oos">Built by Open Ocean</button>
+        </div>
+      </div>
+      <p class="oo-meta" aria-live="polite" data-oo-count>Showing {{ config.extra.projects | length }} of {{ config.extra.projects | length }}</p>
+      <div class="oo-grid">
+        {% for p in config.extra.projects %}
+          {% include "partials/project-card.html" %}
+        {% endfor %}
+      </div>
+      <p class="oo-directory__empty" data-oo-empty hidden>No project matches. <a href="{{ config.extra.forum_url }}">Ask on the forum</a> or <a href="{{ 'join/' | url }}">suggest one</a>.</p>
+    </div>
+  {% endset %}
+  {{ page.content | replace("<p>[[directory]]</p>", directory) }}
+{% endblock %}

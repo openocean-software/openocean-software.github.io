@@ -1,0 +1,34 @@
+{#-
+  Site-wide overrides: Lora for headings (Material only loads one text and
+  one code font) and the community footer. Page templates in this folder
+  extend this file.
+-#}
+{% extends "base.html" %}
+
+{% block extrahead %}
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap">
+{% endblock %}
+
+{% block footer %}
+  <footer class="oo-footer">
+    <div class="oo-footer__inner md-grid">
+      <div class="oo-footer__about">
+        <div class="oo-footer__name">open ocean software</div>
+        <p>Funded by the U.S. National Science Foundation under the Pathways to Enable Open-Source Ecosystems (POSE) program.</p>
+      </div>
+      <nav class="oo-footer__links" aria-label="Footer: hub">
+        <a href="{{ 'projects/' | url }}">Member projects</a>
+        <a href="{{ 'toolkit/' | url }}">Toolkit</a>
+        <a href="{{ 'join/' | url }}">Join</a>
+        <a href="{{ 'devsecops/' | url }}">DevSecOps</a>
+      </nav>
+      <nav class="oo-footer__links" aria-label="Footer: community">
+        <a href="{{ config.extra.forum_url }}">Forum</a>
+        <a href="https://github.com/openocean-software/">GitHub</a>
+        <a href="https://buttondown.com/openoceansoftware">Newsletter</a>
+        <a href="mailto:events@oceansoft.org">events@oceansoft.org</a>
+      </nav>
+    </div>
+  </footer>
+{% endblock %}

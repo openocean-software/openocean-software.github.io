@@ -1,0 +1,192 @@
+{#-
+  Home page. Everything renders from config.extra, which hooks/oceansoft.py
+  fills from data/*.yml and the forum, so routine updates are YAML edits.
+  The full-width sections live in the tabs block, outside Material's
+  md-grid, so their background bands can run edge to edge. Not the hero
+  block: base.html renders that above the tabs, which would push the tab
+  bar under the whole page.
+-#}
+{% extends "main.html" %}
+
+{% block tabs %}
+{{ super() }}
+<div class="oo-home">
+
+  <section class="oo-hero" aria-labelledby="oo-hero-title">
+    <div class="oo-hero__inner md-grid">
+      <div class="oo-hero__text">
+        <div class="oo-eyebrow">NSF POSE project · open-source marine robotics</div>
+        <h1 id="oo-hero-title">The home port for open-source marine robotics.</h1>
+        <p class="oo-lede">Open Ocean Software brings together the people and projects behind autonomy, middleware, and communications for AUVs, ASVs, moorings, and drifters. Find a project, connect your stack, and help set the standards.</p>
+        <form class="oo-search" role="search" action="{{ 'projects/' | url }}" method="get">
+          <label for="oo-hub-search">Search member projects</label>
+          <input id="oo-hub-search" name="q" type="search" placeholder="e.g. acoustic comms, ROS 2, autonomy">
+          <button type="submit" class="oo-button oo-button--accent">Search</button>
+        </form>
+        <div class="oo-actions">
+          <a class="oo-button oo-button--ink" href="{{ 'projects/' | url }}">Browse member projects</a>
+          <a class="oo-button oo-button--outline" href="{{ config.extra.forum_url }}">Join the forum</a>
+        </div>
+      </div>
+      <figure class="oo-hero__figure">
+        <img src="{{ 'assets/community-day26-auv-photo.jpg' | url }}" alt="Yellow autonomous underwater vehicle at the surface with a tow cable attached to its nose">
+        <figcaption>Vehicles at sea run on community-maintained code.</figcaption>
+      </figure>
+    </div>
+    {# The logo wave, stretched to the page width. #}
+    <svg class="oo-wave" aria-hidden="true" viewBox="0 0 190 70" preserveAspectRatio="none"><path d="M 0,60 C 120,60 95,8 128,40 C 160,72 190,60 190,60" vector-effect="non-scaling-stroke"/></svg>
+  </section>
+
+  <section class="md-grid oo-section oo-section--tight" aria-label="At a glance">
+    <div class="oo-stats">
+      <div><span class="oo-stats__value">{{ config.extra.stats.members }}</span><span>member projects, with more in review</span></div>
+      <div><span class="oo-stats__value">6</span><span>native outputs from one message set: C++, Python, Rust, C, ROS 2, LCM</span></div>
+      <div><span class="oo-stats__value">1</span><span>signed apt repository for Debian and Ubuntu</span></div>
+      <div><span class="oo-stats__value">{{ config.extra.stats.events_this_year }}</span><span>community events in {{ config.extra.stats.year }}</span></div>
+    </div>
+  </section>
+
+  <section class="md-grid oo-section" aria-labelledby="oo-projects-title">
+    <div class="oo-section__head">
+      <div>
+        <h2 id="oo-projects-title">Member projects</h2>
+        <p>Peer-reviewed, maintained, open-source software that runs on real vehicles. Each project keeps its own home; this is where you find them together.</p>
+      </div>
+      <a class="oo-more" href="{{ 'projects/' | url }}">See the full directory →</a>
+    </div>
+    <div class="oo-grid">
+      {% for p in config.extra.projects if p.kind == "member" %}
+        {% include "partials/project-card.html" %}
+      {% endfor %}
+      <article class="oo-card oo-card--open">
+        <div class="oo-eyebrow">Open seat</div>
+        <h3 class="oo-card__name">Your project here</h3>
+        <p class="oo-card__summary">Do you maintain open-source software for marine robots? Get packaging, security reviews, and a seat at the table.</p>
+        <a class="oo-more" href="{{ 'join/' | url }}">How to join →</a>
+      </article>
+    </div>
+  </section>
+
+  <section class="oo-band" aria-labelledby="oo-services-title">
+    <div class="md-grid oo-section">
+      <div class="oo-section__head">
+        <div>
+          <h2 id="oo-services-title">What membership brings</h2>
+          <p>Open Ocean Software is a shared crew. Projects keep their own code and roadmap; we provide the services no single lab has time to run.</p>
+        </div>
+      </div>
+      <ol class="oo-services">
+        <li><h3>Trust</h3><p>A secure build pipeline, GPG-signed packages, and OpenSSF Scorecard tracking for member repositories.</p></li>
+        <li><h3>Discoverability</h3><p>One directory, one forum, and project manifests, so users find the right tool and the right people.</p></li>
+        <li><h3>Interoperability</h3><p>Common messages and maintained bridges across ROS 2, MOOS-IvP, Goby, and LCM.</p></li>
+        <li><h3>Accessibility</h3><p>DevOps help and binary packages, so new users install with apt instead of building from source.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="md-grid oo-section oo-split" aria-labelledby="oo-interop-title">
+    <div class="oo-split__text">
+      <div class="oo-eyebrow">openocean-messages</div>
+      <h2 id="oo-interop-title">One message set. Native types for every stack.</h2>
+      <p>Write <code>Navigation</code> once in Protobuf. Get first-class ROS 2 and LCM types with no Protobuf at runtime, plus C++, Python, Rust, and nanopb for embedded C.</p>
+      <div class="oo-chips">
+        <span class="oo-tag">C++</span><span class="oo-tag">Python</span><span class="oo-tag">Rust</span><span class="oo-tag">C (nanopb)</span><span class="oo-tag oo-tag--solid">ROS 2 msg</span><span class="oo-tag oo-tag--solid">LCM</span>
+      </div>
+      <a class="oo-more" href="{{ 'toolkit/' | url }}">Explore the toolkit →</a>
+    </div>
+    {# Shortened from openocean-messages-examples/protobuf/python/navigation.py #}
+    <figure class="oo-code">
+      <figcaption>protobuf/python/navigation.py</figcaption>
+      <pre><code>from openocean.messages import common_pb2, navigation_pb2
+
+nav = navigation_pb2.Navigation()
+nav.vehicle.name = "auv1"
+nav.geodetic.latitude = 41.52
+nav.geodetic.longitude = -70.67
+nav.geodetic.depth = 10
+nav.attitude.heading = 1.57  # radians
+nav.speed.add(value=1.5,
+    mode=common_pb2.SPEED_MODE_OVER_GROUND)</code></pre>
+    </figure>
+  </section>
+
+  <section class="oo-band" aria-labelledby="oo-community-title">
+    <div class="md-grid oo-section">
+      <h2 id="oo-community-title">On deck in the community</h2>
+      <div class="oo-community">
+        <div class="oo-panel oo-community__forum">
+          <div class="oo-panel__head">
+            <h3>Latest on the forum</h3>
+            <span class="oo-meta">from {{ config.extra.forum_url | replace("https://", "") }}</span>
+          </div>
+          {% if config.extra.forum_topics %}
+            <ul class="oo-topics">
+              {% for t in config.extra.forum_topics %}
+                <li><a href="{{ t.url }}">{{ t.title }}</a><span class="oo-meta">{% if t.category %}{{ t.category }} · {% endif %}{{ t.replies }} {{ "reply" if t.replies == 1 else "replies" }}</span></li>
+              {% endfor %}
+            </ul>
+          {% else %}
+            <p>Ask questions, share deployments, and follow news from the community.</p>
+          {% endif %}
+          <div class="oo-actions">
+            <a class="oo-button oo-button--accent" href="{{ config.extra.forum_url }}">Open the forum</a>
+            <a class="oo-more" href="{{ config.extra.forum_url }}/c/news/24">News category →</a>
+          </div>
+        </div>
+        <div class="oo-community__side">
+          {# Plain-HTML Buttondown embed; replaces the iframe so it matches the site and works without JS. #}
+          <form class="oo-panel oo-newsletter" action="https://buttondown.com/api/emails/embed-subscribe/openoceansoftware" method="post" target="_blank">
+            <h3>Newsletter</h3>
+            <p>Key events and updates. Infrequent, by design.</p>
+            <label for="oo-nl-email">Email address</label>
+            <input id="oo-nl-email" type="email" name="email" placeholder="you@example.org" required>
+            <button type="submit" class="oo-button oo-button--ink">Subscribe</button>
+          </form>
+          <div class="oo-panel">
+            <div class="oo-eyebrow">Survey · 8–10 min</div>
+            <h3>ROS Maritime Community Pulse</h3>
+            <p>ROS, MOOS-IvP, Goby, or something else: tell us what to build next.</p>
+            <a class="oo-more" href="{{ 'ros-maritime-survey/' | url }}">Take the survey →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="events" class="md-grid oo-section" aria-labelledby="oo-events-title">
+    <div class="oo-section__head">
+      <h2 id="oo-events-title">Events</h2>
+      <a class="oo-more" href="{{ config.extra.forum_url }}">Watch the forum for new dates →</a>
+    </div>
+    <div class="oo-events">
+      {% for e in config.extra.events_upcoming %}
+        {% set slot = "Next" if loop.first else "Upcoming" %}
+        {% include "partials/event-card.html" %}
+      {% endfor %}
+      {% for e in config.extra.events_recent[:3] %}
+        {% set slot = None %}
+        {% include "partials/event-card.html" %}
+      {% endfor %}
+    </div>
+  </section>
+
+  <section class="oo-crew" aria-labelledby="oo-crew-title">
+    <div class="md-grid oo-section oo-split">
+      <div class="oo-split__text">
+        <h2 id="oo-crew-title">Run by maintainers, for maintainers</h2>
+        <p>The team has spent decades deploying AUVs with open-source software. Many of us maintain the projects listed here.</p>
+        <a class="oo-more" href="{{ 'team/' | url }}">Meet the team →</a>
+      </div>
+      <ul class="oo-crew__list">
+        {% for m in config.extra.team %}
+          <li><strong>{{ m.name }}</strong><span>{{ m.short or m.role }}</span></li>
+        {% endfor %}
+      </ul>
+    </div>
+  </section>
+
+</div>
+{% endblock %}
+
+{% block site_nav %}{% endblock %}
+{% block container %}{% endblock %}
