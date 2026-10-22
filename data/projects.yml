@@ -1,0 +1,119 @@
+# Member projects and Open Ocean initiatives shown on the home page, the
+# directory (projects/index.md) and each project page (projects/<slug>.md).
+#
+# Required per entry: slug, name, kind, category, filter, summary
+#   kind:   member | initiative
+#   filter: autonomy | middleware | ros | encoding | oos  (directory filter chips)
+#
+# Leave a field out (or null) until the team has agreed on it; the templates
+# hide anything that is not set rather than printing a placeholder. stage and
+# badge are assigned at member review, see openocean-plan/member-projects.
+#   stage: pond | explorer | estuary | bay | ocean
+#   badge: research | community | project | product | ecosystem
+#
+# page: site-relative URL of the entry's page. Defaults to projects/<slug>/.
+#
+# standards: evidence URL per minimum from the documentation and
+# maintainability policies. Any key left out renders as "not yet reviewed".
+
+- slug: moos-ivp
+  name: MOOS-IvP
+  kind: member
+  category: Autonomy
+  filter: autonomy
+  summary: >-
+    Open-source C++ modules for autonomy on marine vehicles, with the IvP Helm
+    multi-objective decision engine.
+  language: C++
+  middleware: MOOS
+  maintainer: Mike Benjamin
+  affiliation: MIT
+  tags: [C++, MOOS]
+  apt_packages: [moos-ivp-apps, moos-ivp-gui, moos-ivp-tools]
+  links:
+    - {label: Website, url: "https://oceanai.mit.edu/moos-ivp"}
+    - {label: GitHub, url: "https://github.com/moos-ivp"}
+  issues: "https://github.com/moos-ivp"
+
+- slug: whoi-ros
+  name: WHOI-ROS
+  kind: member
+  category: ROS 2
+  filter: ros
+  summary: >-
+    Shared ROS 2 libraries and tools for underwater vehicle operations from
+    Woods Hole Oceanographic Institution. Successor to DS_ROS.
+  middleware: ROS 2
+  maintainer: Isaac Vandor
+  affiliation: WHOI
+  tags: [ROS 2]
+  links:
+    - {label: GitLab, url: "https://git.whoi.edu/whoi-ros"}
+  issues: "https://git.whoi.edu/whoi-ros"
+
+- slug: goby3
+  name: Goby3
+  kind: member
+  category: Middleware and comms
+  filter: middleware
+  summary: >-
+    One framework for vehicle collaboration across acoustic and satellite
+    links, interprocess, and interthread communications.
+  language: C++
+  middleware: Goby
+  maintainer: Toby Schneider
+  affiliation: GobySoft
+  tags: [C++, Acoustic comms]
+  scorecard: github.com/GobySoft/goby3
+  links:
+    - {label: Website, url: "https://goby.software"}
+    - {label: GitHub, url: "https://github.com/GobySoft/goby3"}
+  issues: "https://github.com/GobySoft/goby3/issues"
+
+- slug: dccl
+  name: DCCL
+  kind: member
+  category: Encoding
+  filter: encoding
+  summary: >-
+    Compact message marshalling for very low-throughput links such as
+    acoustic modems and satellite.
+  language: C++
+  maintainer: Toby Schneider
+  affiliation: GobySoft
+  tags: [C++, Acoustic comms]
+  scorecard: github.com/GobySoft/dccl
+  links:
+    - {label: Website, url: "https://libdccl.org/4.0/"}
+    - {label: GitHub, url: "https://github.com/GobySoft/dccl"}
+  issues: "https://github.com/GobySoft/dccl/issues"
+
+- slug: openocean-messages
+  name: openocean-messages
+  kind: initiative
+  category: Interoperability
+  filter: oos
+  summary: >-
+    Common Protobuf messages for marine systems, generated as native C++,
+    Python, Rust, nanopb, ROS 2, and LCM types.
+  license: Apache-2.0
+  maintainer: Open Ocean Software
+  tags: [Protobuf, ROS 2, LCM, Rust]
+  page: toolkit/
+  links:
+    - {label: GitHub, url: "https://github.com/openocean-software/openocean-messages"}
+    - {label: Examples, url: "https://github.com/openocean-software/openocean-messages-examples"}
+
+- slug: openocean-build
+  name: openocean-build
+  kind: initiative
+  category: Packaging
+  filter: oos
+  summary: >-
+    Secure build pipeline and signed apt repository for member projects.
+    MOOS-IvP for Debian and Ubuntu today.
+  maintainer: Open Ocean Software
+  tags: [Debian, Ubuntu]
+  page: devsecops/
+  links:
+    - {label: GitHub, url: "https://github.com/openocean-software/openocean-build"}

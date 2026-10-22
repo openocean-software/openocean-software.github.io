@@ -1,0 +1,20 @@
+# Community events for the home page. The hook splits these on build date:
+# anything on or after today is "upcoming", the rest are "recent" (newest
+# first). The nightly deploy rebuild moves an event across on its own.
+#
+# Required per entry: name, date (YYYY-MM-DD), venue
+# Link with url (external) or page (site-relative, e.g. community-day-uk-2026/)
+
+- name: Future directions in open source for the ocean
+  kind: Town Hall, OCEANS 2026 Monterey
+  date: 2026-09-23
+  venue: Monterey, CA
+  summary: Expert panel and open discussion.
+  url: "https://monterey26.oceansconference.org/town-halls-2026/#3d43e3378637c32a6"
+
+- name: Open Ocean Software Community Day UK
+  kind: Community day
+  date: 2026-09-04
+  venue: National Oceanography Centre, Southampton
+  summary: Talks and discussion after IEEE OES AUV 2026.
+  page: community-day-uk-2026/

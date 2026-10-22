@@ -1,0 +1,54 @@
+# Team page (team.md) and the crew strip on the home page.
+# role is the full title; short is the one-line version for the home page.
+
+- name: Eric Gallimore
+  role: PI, Maintainer for ROS-Acomms
+  short: PI · ROS-Acomms
+  orcid: "https://orcid.org/0000-0001-6772-8707"
+  web: "https://www.ericgallimore.com/"
+  linkedin: "https://www.linkedin.com/in/ericgallimore"
+  github: "https://github.com/EricGallimore"
+
+- name: Toby Schneider
+  role: co-PI, Team Lead, Maintainer for Goby/DCCL
+  short: co-PI, team lead · Goby, DCCL
+  orcid: "https://orcid.org/0009-0000-6795-0308"
+  web: "https://gobysoft.org/people/toby/"
+  linkedin: "https://www.linkedin.com/in/toby-edwin-schneider"
+  github: "https://github.com/tsaubergine"
+
+- name: Hanu Singh
+  role: co-PI, Governance
+  short: co-PI · governance
+  orcid: "https://orcid.org/0000-0002-4975-3244"
+  web: "https://coe.northeastern.edu/people/singh-hanumant/"
+  linkedin: "https://www.linkedin.com/in/hanu-singh-8370367"
+  github: "https://github.com/hanumantsingh"
+
+- name: Mike Benjamin
+  role: co-PI, co-Community Manager, Maintainer for MOOS-IvP
+  short: co-PI, community · MOOS-IvP
+  orcid: "https://orcid.org/0000-0002-2520-6465"
+  web: "https://meche.mit.edu/people/faculty/mikerb@mit.edu"
+  linkedin: "https://www.linkedin.com/in/michael-benjamin-25850750/"
+  github: "https://github.com/mikerb"
+
+- name: Isaac Vandor
+  role: co-Community Manager, Maintainer for WHOI-ROS
+  short: community · WHOI-ROS
+  orcid: "https://orcid.org/0009-0004-9739-3134"
+  web: "http://isaacvandor.com/"
+  linkedin: "https://www.linkedin.com/in/isaacvandor/"
+  github: "https://github.com/isaacvandor"
+
+- name: Dave Ford
+  role: Industry Mentor
+  short: industry mentor
+  linkedin: "https://www.linkedin.com/in/david-ford-63697/"
+  github: "https://github.com/submergedguy"
+
+- name: Dennis Giaya
+  role: Project Standards
+  short: project standards
+  web: "https://scholar.google.com/citations?user=1-jspVAAAAAJ&hl=en"
+  github: "https://github.com/dgiaya"
