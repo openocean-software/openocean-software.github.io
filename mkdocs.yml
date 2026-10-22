@@ -71,6 +71,10 @@ extra:
   - icon: fontawesome/brands/github
     link: https://github.com/openocean-software/
   generator: false
+  # Shown in the project page trust panel. hooks/oceansoft.py fails the build
+  # if devsecops.md doesn't carry the same fingerprint, so rotate both at once.
+  signing_key:
+    fingerprint: D7D7224D53A4F29E303FE01DEB505B68A5D063B0
 
 extra_css:
   - stylesheets/extra.css
