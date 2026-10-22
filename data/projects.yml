@@ -15,6 +15,13 @@
 #
 # standards: evidence URL per minimum from the documentation and
 # maintainability policies. Any key left out renders as "not yet reviewed".
+#   documentation:   purpose, usage, interface, assumptions
+#   maintainability: build, contracts, verified, issues
+#
+# Other optional fields: language, middleware, license, latest_release,
+# affiliation, tags, links, issues (tracker URL), scorecard (github.com/org/repo
+# for the OpenSSF badge), apt_packages (marks the project as apt-packaged:
+# chip, install button, signing key in the trust panel).
 
 - slug: moos-ivp
   name: MOOS-IvP
