@@ -66,6 +66,25 @@ def on_config(config: Any, **kwargs: Any) -> Any:
     return config
 
 
+def on_page_context(context: Any, page: Any, config: Any, **kwargs: Any) -> Any:
+    """Fail the build when a project page names a slug that isn't in projects.yml.
+
+    Without this, overrides/project.html renders an empty header for a typo'd
+    ``project:`` front matter key instead of erroring.
+    """
+    slug = page.meta.get("project")
+    if slug is not None:
+        check_project_slug(slug, config.extra["projects"], page_path=page.file.src_path)
+    return context
+
+
+def check_project_slug(slug: str, projects: list[dict[str, Any]], *, page_path: str) -> None:
+    """Raise if ``slug`` doesn't name an entry in ``projects``."""
+    known = [p["slug"] for p in projects]
+    if slug not in known:
+        raise ValueError(f"{page_path}: project '{slug}' is not in data/projects.yml — known slugs: {', '.join(known)}")
+
+
 def load_projects(path: Path) -> list[dict[str, Any]]:
     """Read and validate ``projects.yml``.
 

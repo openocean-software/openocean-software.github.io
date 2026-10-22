@@ -112,6 +112,14 @@ def test_projects_reject_duplicate_slug(tmp_path):
         hooks.load_projects(_write(tmp_path, entry * 2))
 
 
+def test_project_page_with_unknown_slug_fails():
+    # a typo'd `project:` front matter key would otherwise render an empty project page
+    projects = [{"slug": "dccl"}, {"slug": "goby3"}]
+    hooks.check_project_slug("goby3", projects, page_path="projects/goby3.md")
+    with pytest.raises(ValueError, match="'goby' is not in data/projects.yml"):
+        hooks.check_project_slug("goby", projects, page_path="projects/goby.md")
+
+
 def test_repo_data_files_load():
     # catches a bad edit to data/*.yml before it reaches the deploy
     data = _HOOK.parent.parent / "data"
