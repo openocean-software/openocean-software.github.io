@@ -20,7 +20,7 @@ For Debian stable/oldstable and Ubuntu active LTS releases:
   ```
   OOS_KEY=D7D7224D53A4F29E303FE01DEB505B68A5D063B0
   OOS_KEYRING=/etc/apt/keyrings/oceansoft.gpg
-  gpg --keyserver keyserver.ubuntu.com --recv-keys $OOS_KEY && gpg --export $OOS_KEY > $OOS_KEYRING
+  gpg --keyserver keyserver.ubuntu.com --recv-keys $OOS_KEY && gpg --export $OOS_KEY | sudo tee $OOS_KEYRING > /dev/null
   ```
 - Add `apt` sources:
   ```
