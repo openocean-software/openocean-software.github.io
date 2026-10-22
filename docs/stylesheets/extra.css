@@ -750,8 +750,10 @@
   gap: 1rem;
 }
 
-.md-typeset .oo-standards ul,
-.md-typeset .oo-linklist {
+/* [dir] matches Material's own `[dir=ltr] .md-typeset ul` indent rule, so
+   this reset wins on specificity rather than leaving a 0.625em indent. */
+[dir] .md-typeset .oo-standards ul,
+[dir] .md-typeset ul.oo-linklist {
   margin: 0;
   padding: 0;
   list-style: none;
