@@ -16,11 +16,11 @@
   <ul class="oo-team">
     {% for m in config.extra.team %}
       <li class="oo-panel">
-        <h2>{{ m.name }}</h2>
-        <p>{{ m.role }}</p>
+        <h2>{{ m.name | e }}</h2>
+        <p>{{ m.role | e }}</p>
         <div class="oo-team__links">
           {% for key, icon, label in profiles if m[key] %}
-            <a href="{{ m[key] }}" aria-label="{{ label }}: {{ m.name }}" title="{{ label }}">{% include ".icons/" ~ icon ~ ".svg" %}</a>
+            <a href="{{ m[key] | e }}" aria-label="{{ label | e }}: {{ m.name | e }}" title="{{ label | e }}">{% include ".icons/" ~ icon ~ ".svg" %}</a>
           {% endfor %}
         </div>
       </li>

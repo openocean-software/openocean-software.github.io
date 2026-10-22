@@ -1,24 +1,25 @@
 {#-
   One project card, shared by the home page and the directory. Expects `p`
   (an entry from data/projects.yml). The data-* attributes drive the
-  directory filter in javascripts/directory.js.
+  directory filter in javascripts/directory.js; data-search holds every
+  text field a visitor might type, so keep it in step with the facts panel.
 -#}
-<article class="oo-card" data-filter="{{ p.filter }}" data-search="{{ (p.name ~ ' ' ~ p.category ~ ' ' ~ p.summary ~ ' ' ~ (p.tags or []) | join(' ')) | lower | e }}">
+<article class="oo-card" data-filter="{{ p.filter | e }}" data-search="{{ ([p.name, p.category, p.summary, p.language, p.middleware, p.maintainer, p.affiliation] + (p.tags or [])) | select | join(' ') | lower | e }}">
   <div class="oo-card__top">
-    <span class="oo-eyebrow">{{ p.category }}</span>
+    <span class="oo-eyebrow">{{ p.category | e }}</span>
     {% if p.kind == "initiative" %}
       <span class="oo-kind oo-kind--initiative">Open Ocean</span>
     {% endif %}
   </div>
-  <h3 class="oo-card__name"><a href="{{ p.page | url }}">{{ p.name }}</a></h3>
-  <p class="oo-card__summary">{{ p.summary }}</p>
+  <h3 class="oo-card__name"><a href="{{ p.page | url | e }}">{{ p.name | e }}</a></h3>
+  <p class="oo-card__summary">{{ p.summary | e }}</p>
   <div class="oo-chips">
-    {% for t in p.tags or [] %}<span class="oo-chip">{{ t }}</span>{% endfor %}
+    {% for t in p.tags or [] %}<span class="oo-chip">{{ t | e }}</span>{% endfor %}
     {% if p.apt_packages %}<span class="oo-chip oo-chip--solid">apt package</span>{% endif %}
     {% if p.scorecard %}<span class="oo-chip oo-chip--wave">OpenSSF Scorecard</span>{% endif %}
-    {% if p.license %}<span class="oo-chip oo-chip--solid">{{ p.license }}</span>{% endif %}
+    {% if p.license %}<span class="oo-chip oo-chip--solid">{{ p.license | e }}</span>{% endif %}
   </div>
   <div class="oo-card__foot">
-    {% if p.affiliation %}{{ p.maintainer }}, {{ p.affiliation }}{% else %}{{ p.maintainer }}{% endif %}
+    {% if p.affiliation %}{{ p.maintainer | e }}, {{ p.affiliation | e }}{% else %}{{ p.maintainer | e }}{% endif %}
   </div>
 </article>

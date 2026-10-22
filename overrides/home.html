@@ -25,7 +25,7 @@
         </form>
         <div class="oo-actions">
           <a class="oo-button oo-button--ink" href="{{ 'projects/' | url }}">Browse member projects</a>
-          <a class="oo-button oo-button--outline" href="{{ config.extra.forum_url }}">Join the forum</a>
+          <a class="oo-button oo-button--outline" href="{{ config.extra.forum_url | e }}">Join the forum</a>
         </div>
       </div>
       <figure class="oo-hero__figure">
@@ -39,10 +39,10 @@
 
   <section class="md-grid oo-section oo-section--tight" aria-label="At a glance">
     <div class="oo-stats">
-      <div><span class="oo-stats__value">{{ config.extra.stats.members }}</span><span>member projects, with more in review</span></div>
+      <div><span class="oo-stats__value">{{ config.extra.stats.members | e }}</span><span>member projects, with more in review</span></div>
       <div><span class="oo-stats__value">6</span><span>native outputs from one message set: C++, Python, Rust, C, ROS 2, LCM</span></div>
       <div><span class="oo-stats__value">1</span><span>signed apt repository for Debian and Ubuntu</span></div>
-      <div><span class="oo-stats__value">{{ config.extra.stats.events_this_year }}</span><span>community events in {{ config.extra.stats.year }}</span></div>
+      <div><span class="oo-stats__value">{{ config.extra.stats.events_this_year | e }}</span><span>community events in {{ config.extra.stats.year | e }}</span></div>
     </div>
   </section>
 
@@ -117,20 +117,20 @@ nav.speed.add(value=1.5,
         <div class="oo-panel oo-community__forum">
           <div class="oo-panel__head">
             <h3>Latest on the forum</h3>
-            <span class="oo-meta">from {{ config.extra.forum_url | replace("https://", "") }}</span>
+            <span class="oo-meta">from {{ config.extra.forum_url | replace("https://", "") | e }}</span>
           </div>
           {% if config.extra.forum_topics %}
             <ul class="oo-topics">
               {% for t in config.extra.forum_topics %}
-                <li><a href="{{ t.url }}">{{ t.title }}</a><span class="oo-meta">{% if t.category %}{{ t.category }} · {% endif %}{{ t.replies }} {{ "reply" if t.replies == 1 else "replies" }}</span></li>
+                <li><a href="{{ t.url | e }}">{{ t.title | e }}</a><span class="oo-meta">{% if t.category %}{{ t.category | e }} · {% endif %}{{ t.replies | e }} {{ ("reply" if t.replies == 1 else "replies") | e }}</span></li>
               {% endfor %}
             </ul>
           {% else %}
             <p>Ask questions, share deployments, and follow news from the community.</p>
           {% endif %}
           <div class="oo-actions">
-            <a class="oo-button oo-button--accent" href="{{ config.extra.forum_url }}">Open the forum</a>
-            <a class="oo-more" href="{{ config.extra.forum_url }}/c/news/24">News category →</a>
+            <a class="oo-button oo-button--accent" href="{{ config.extra.forum_url | e }}">Open the forum</a>
+            <a class="oo-more" href="{{ config.extra.forum_url | e }}/c/news/24">News category →</a>
           </div>
         </div>
         <div class="oo-community__side">
@@ -156,7 +156,7 @@ nav.speed.add(value=1.5,
   <section id="events" class="md-grid oo-section" aria-labelledby="oo-events-title">
     <div class="oo-section__head">
       <h2 id="oo-events-title">Events</h2>
-      <a class="oo-more" href="{{ config.extra.forum_url }}">Watch the forum for new dates →</a>
+      <a class="oo-more" href="{{ config.extra.forum_url | e }}">Watch the forum for new dates →</a>
     </div>
     <div class="oo-events">
       {% for e in config.extra.events_upcoming %}
@@ -179,7 +179,7 @@ nav.speed.add(value=1.5,
       </div>
       <ul class="oo-crew__list">
         {% for m in config.extra.team %}
-          <li><strong>{{ m.name }}</strong><span>{{ m.short or m.role }}</span></li>
+          <li><strong>{{ m.name | e }}</strong><span>{{ (m.short or m.role) | e }}</span></li>
         {% endfor %}
       </ul>
     </div>

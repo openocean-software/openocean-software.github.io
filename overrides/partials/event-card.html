@@ -4,18 +4,18 @@
 -#}
 <article class="oo-event{% if slot %} oo-event--upcoming{% endif %}">
   <div class="oo-event__date" aria-hidden="true">
-    <span>{{ e.date.strftime("%b") | upper }}</span>
-    <span class="oo-event__day">{{ e.date.strftime("%d") }}</span>
-    <span>{{ e.date.year }}</span>
+    <span>{{ e.date.strftime("%b") | upper | e }}</span>
+    <span class="oo-event__day">{{ e.date.strftime("%d") | e }}</span>
+    <span>{{ e.date.year | e }}</span>
   </div>
   <div class="oo-event__body">
-    <div class="oo-eyebrow{% if slot %} oo-eyebrow--accent{% endif %}">{% if slot %}{{ slot }} · {% endif %}{{ e.kind or "Event" }}</div>
+    <div class="oo-eyebrow{% if slot %} oo-eyebrow--accent{% endif %}">{% if slot %}{{ slot | e }} · {% endif %}{{ (e.kind or "Event") | e }}</div>
     <h3>
-      {% if e.page %}<a href="{{ e.page | url }}">{{ e.name }}</a>
-      {% elif e.url %}<a href="{{ e.url }}">{{ e.name }}</a>
-      {% else %}{{ e.name }}{% endif %}
+      {% if e.page %}<a href="{{ e.page | url | e }}">{{ e.name | e }}</a>
+      {% elif e.url %}<a href="{{ e.url | e }}">{{ e.name | e }}</a>
+      {% else %}{{ e.name | e }}{% endif %}
     </h3>
-    <p><time datetime="{{ e.date.isoformat() }}">{{ e.date.day }} {{ e.date.strftime("%B %Y") }}</time> · {{ e.venue }}</p>
-    {% if e.summary %}<p>{{ e.summary }}</p>{% endif %}
+    <p><time datetime="{{ e.date.isoformat() | e }}">{{ e.date.day | e }} {{ e.date.strftime("%B %Y") | e }}</time> · {{ e.venue | e }}</p>
+    {% if e.summary %}<p>{{ e.summary | e }}</p>{% endif %}
   </div>
 </article>

@@ -2,6 +2,8 @@
   Member project directory (projects/index.md). The page's Markdown renders
   as normal; the card grid replaces the "[[directory]]" paragraph, so the
   intro and the bridge table above and below it stay editable in Markdown.
+  hooks/oceansoft.py supplies the marker and the filter chips, and fails the
+  build if the marker paragraph is missing.
 -#}
 {% extends "main.html" %}
 
@@ -15,11 +17,9 @@
         </div>
         <div class="oo-directory__filters" role="group" aria-label="Filter by category">
           <button type="button" class="oo-filter" aria-pressed="true" data-oo-filter="all">All</button>
-          <button type="button" class="oo-filter" aria-pressed="false" data-oo-filter="autonomy">Autonomy</button>
-          <button type="button" class="oo-filter" aria-pressed="false" data-oo-filter="middleware">Middleware and comms</button>
-          <button type="button" class="oo-filter" aria-pressed="false" data-oo-filter="ros">ROS 2</button>
-          <button type="button" class="oo-filter" aria-pressed="false" data-oo-filter="encoding">Encoding</button>
-          <button type="button" class="oo-filter" aria-pressed="false" data-oo-filter="oos">Built by Open Ocean</button>
+          {% for f in config.extra.filters %}
+            <button type="button" class="oo-filter" aria-pressed="false" data-oo-filter="{{ f.key | e }}">{{ f.label | e }}</button>
+          {% endfor %}
         </div>
       </div>
       <p class="oo-meta" aria-live="polite" data-oo-count>Showing {{ config.extra.projects | length }} of {{ config.extra.projects | length }}</p>
@@ -28,8 +28,8 @@
           {% include "partials/project-card.html" %}
         {% endfor %}
       </div>
-      <p class="oo-directory__empty" data-oo-empty hidden>No project matches. <a href="{{ config.extra.forum_url }}">Ask on the forum</a> or <a href="{{ 'join/' | url }}">suggest one</a>.</p>
+      <p class="oo-directory__empty" data-oo-empty hidden>No project matches. <a href="{{ config.extra.forum_url | e }}">Ask on the forum</a> or <a href="{{ 'join/' | url }}">suggest one</a>.</p>
     </div>
   {% endset %}
-  {{ page.content | replace("<p>[[directory]]</p>", directory) }}
+  {{ page.content | replace(config.extra.directory_marker, directory) }}
 {% endblock %}
