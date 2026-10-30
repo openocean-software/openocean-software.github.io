@@ -47,7 +47,7 @@
       {{ page.content }}
 
       <h2 id="standards">Member standards</h2>
-      <p>Every member project meets four documentation and four maintainability minimums. Reviewers link the evidence here so users can judge fit at a glance.{% if p.badge %} Maintainability badge: <strong>{{ p.badge | capitalize | e }}-Grade</strong>.{% endif %}</p>
+      <p>Member projects are reviewed against four documentation and four maintainability minimums. Reviewers link the evidence for each one here.{% if p.badge %} Maintainability badge: <strong>{{ p.badge | capitalize | e }}-Grade</strong>.{% endif %}</p>
       <div class="oo-standards">
         {% for title, items in [("Documentation", doc_minimums), ("Maintainability", maint_minimums)] %}
           <div class="oo-panel">
@@ -65,7 +65,7 @@
 
     <aside class="oo-project__aside" aria-label="Project facts">
       <div class="oo-panel oo-panel--band">
-        <h2>At a glance</h2>
+        <h2>Details</h2>
         <dl class="oo-facts">
           <dt>Maintainer</dt><dd>{{ p.maintainer | e }}{% if p.affiliation %}, {{ p.affiliation | e }}{% endif %}</dd>
           {% if p.language %}<dt>Language</dt><dd>{{ p.language | e }}</dd>{% endif %}
@@ -78,7 +78,7 @@
       </div>
       {% if p.apt_packages or p.scorecard %}
         <div class="oo-panel">
-          <h2>Trust signals</h2>
+          <h2>Signing and security</h2>
           {% if p.apt_packages %}
             <div class="oo-meta">Package signing key</div>
             {# From extra.signing_key in mkdocs.yml, printed in groups of four like gpg does. #}

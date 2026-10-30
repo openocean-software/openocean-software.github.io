@@ -4,9 +4,9 @@ hide:
   - navigation
 ---
 
-# Bring your project aboard
+# Join as a member project
 
-You keep your code, your roadmap, and your home page. We add packaging, security, interoperability, and an audience that runs vehicles at sea.
+Your project keeps its code, roadmap and home page. We list it in the directory and on the forum, and once it has tagged releases we can package it in the signed apt repository.
 
 [Start on the forum](https://forum.oceansoft.org){ .md-button .md-button--primary } [Read the standards (PDF)](https://github.com/openocean-software/openocean-plan/blob/main/member-projects/guidelines/member_project_standards.pdf){ .md-button }
 
@@ -21,9 +21,9 @@ The secure build pipeline, signed packages, a project page in the [directory](pr
 </div>
 </div>
 
-## From pond to ocean
+## Member stages
 
-Projects enter where they are. Incubating projects get mentoring; research projects are members as-is; maturing projects move downstream as their practices grow.
+Projects join at the stage that fits. Pond projects are incubating and get mentoring. Explorer is for research code, which is a member as it is. Estuary, Bay and Ocean are maturity levels 1 to 3.
 
 <div class="oo-stages" markdown>
 <div class="oo-stage oo-stage--pond" markdown>**Pond**<br><span>Incubating</span></div>
@@ -41,7 +41,7 @@ Projects enter where they are. Incubating projects get mentoring; research proje
 </div>
 </div>
 
-## Eight minimums, any format
+## Minimum standards
 
 We ask what your documentation and process must answer, not which tool writes it. A README, docstrings, tests, or a paper appendix all count.
 

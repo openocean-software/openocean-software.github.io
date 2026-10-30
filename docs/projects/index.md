@@ -6,15 +6,17 @@ hide:
   - toc
 ---
 
-# Member projects and initiatives
+# Member projects
 
-Every project here has a named maintainer, a public issue tracker, and a home of its own. Filter by what you need on your vehicle. Entries come from `data/projects.yml`; projects move through the [member stages](../join.md#from-pond-to-ocean) as their practices grow.
+<!-- Cards come from data/projects.yml. -->
+
+Each project lists its maintainer, where the code lives and where to report issues. New projects move through the [member stages](../join.md#member-stages) as their practices grow.
 
 [[directory]]
 
 ## How member stacks connect today
 
-Bridges exist; maintained bridges are rare. This table tracks each one so you know what to trust before you integrate. Source: [middleware interoperability goal](https://github.com/openocean-software/openocean-plan/blob/main/technical/middleware-interoperability.md) in openocean-plan.
+What we know about each bridge between member stacks today. Send corrections on the [forum](https://forum.oceansoft.org). Source: [middleware interoperability goal](https://github.com/openocean-software/openocean-plan/blob/main/technical/middleware-interoperability.md) in openocean-plan.
 
 | Bridge | Status | Maintainer | Notes |
 |---|---|---|---|
@@ -23,5 +25,3 @@ Bridges exist; maintained bridges are rare. This table tracks each one so you kn
 | ROS 2 ↔ MOOS | <span class="oo-status oo-status--adhoc">Ad hoc</span> | Various | No single maintained bridge. Labs keep custom solutions. |
 | LCM ↔ ROS 2 | <span class="oo-status oo-status--adhoc">Ad hoc</span> | Various | `lcm_to_ros` packages pinned to specific versions. |
 | LCM ↔ MOOS | <span class="oo-status oo-status--research">Research-grade</span> | Various | Published bridge (IEEE, 2019), not actively maintained. |
-
-[See how openocean-messages closes the gap →](../toolkit.md#openocean-messages){ .oo-more }

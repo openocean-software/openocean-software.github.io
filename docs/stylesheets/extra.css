@@ -355,13 +355,6 @@
   border-radius: var(--oo-radius);
 }
 
-.oo-hero__figure figcaption {
-  margin-top: 0.4rem;
-  font-family: var(--md-code-font-family);
-  font-size: 0.65rem;
-  color: var(--oo-muted);
-}
-
 .oo-wave {
   display: block;
   width: 100%;
@@ -467,31 +460,6 @@
 }
 
 .oo-split__text p { color: var(--oo-muted); }
-
-.oo-code {
-  flex: 1 1 24rem;
-  min-width: 0;
-  margin: 0;
-  padding: 1.2rem;
-  border-radius: var(--oo-radius);
-  background: var(--oo-deep);
-  color: var(--oo-deep-text);
-  overflow-x: auto;
-}
-
-.oo-code figcaption {
-  margin-bottom: 0.6rem;
-  font-family: var(--md-code-font-family);
-  font-size: 0.6rem;
-  color: var(--oo-deep-muted);
-}
-
-.oo-code pre {
-  margin: 0;
-  font-family: var(--md-code-font-family);
-  font-size: 0.7rem;
-  line-height: 1.6;
-}
 
 .oo-community {
   display: flex;
@@ -818,7 +786,6 @@
 
 .md-typeset .oo-pipeline__step p { margin: 0; }
 .oo-pipeline__step--source { border-color: var(--oo-ink); }
-.oo-pipeline__step--band { border-color: var(--oo-band); background: var(--oo-band); }
 .oo-pipeline__step--ink { border-color: var(--oo-ink); background: var(--oo-ink); color: var(--oo-deep-text); }
 .oo-pipeline__step--ink .oo-eyebrow,
 .oo-pipeline__step--ink .oo-meta { color: var(--oo-deep-muted); }

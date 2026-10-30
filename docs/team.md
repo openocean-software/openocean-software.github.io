@@ -7,4 +7,6 @@ hide:
 
 # Team
 
-Open Ocean Software is led by a team who have collectively spent decades deploying AUVs in real-world environments running a range of open-source projects. Entries come from `data/team.yml`.
+<!-- The list comes from data/team.yml. -->
+
+The team maintains MOOS-IvP (MIT), Goby and DCCL (GobySoft), and ros_acomms and WHOI-ROS (WHOI).

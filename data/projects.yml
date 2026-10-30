@@ -95,22 +95,6 @@
     - {label: GitHub, url: "https://github.com/GobySoft/dccl"}
   issues: "https://github.com/GobySoft/dccl/issues"
 
-- slug: openocean-messages
-  name: openocean-messages
-  kind: initiative
-  category: Interoperability
-  filter: oos
-  summary: >-
-    Common Protobuf messages for marine systems, generated as native C++,
-    Python, Rust, nanopb, ROS 2, and LCM types.
-  license: Apache-2.0
-  maintainer: Open Ocean Software
-  tags: [Protobuf, ROS 2, LCM, Rust]
-  page: toolkit/
-  links:
-    - {label: GitHub, url: "https://github.com/openocean-software/openocean-messages"}
-    - {label: Examples, url: "https://github.com/openocean-software/openocean-messages-examples"}
-
 - slug: openocean-build
   name: openocean-build
   kind: initiative
