@@ -8,16 +8,16 @@
   <div class="oo-card__top">
     <span class="oo-eyebrow">{{ p.category | e }}</span>
     {% if p.kind == "initiative" %}
-      <span class="oo-kind oo-kind--initiative">Open Ocean</span>
+      <span class="oo-kind">Open Ocean</span>
     {% endif %}
   </div>
   <h3 class="oo-card__name"><a href="{{ p.page | url | e }}">{{ p.name | e }}</a></h3>
   <p class="oo-card__summary">{{ p.summary | e }}</p>
   <div class="oo-chips">
     {% for t in p.tags or [] %}<span class="oo-chip">{{ t | e }}</span>{% endfor %}
-    {% if p.apt_packages %}<span class="oo-chip oo-chip--solid">apt package</span>{% endif %}
-    {% if p.scorecard %}<span class="oo-chip oo-chip--wave">OpenSSF Scorecard</span>{% endif %}
-    {% if p.license %}<span class="oo-chip oo-chip--solid">{{ p.license | e }}</span>{% endif %}
+    {% if p.apt_packages %}<span class="oo-chip">apt package</span>{% endif %}
+    {% if p.scorecard %}<span class="oo-chip">OpenSSF Scorecard</span>{% endif %}
+    {% if p.license %}<span class="oo-chip">{{ p.license | e }}</span>{% endif %}
   </div>
   <div class="oo-card__foot">
     {% if p.affiliation %}{{ p.maintainer | e }}, {{ p.affiliation | e }}{% else %}{{ p.maintainer | e }}{% endif %}

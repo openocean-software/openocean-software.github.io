@@ -47,6 +47,18 @@
   border-bottom: 1px solid var(--oo-line);
 }
 
+/* Material tints the header search a translucent black, which reads as a
+   grey slab on the white header. Draw it as the same pale field as the
+   hub search instead. */
+@media screen and (min-width: 60em) {
+  .md-search__form,
+  .md-search__form:hover {
+    background-color: var(--oo-band);
+    box-shadow: inset 0 0 0 1px var(--oo-line);
+    border-radius: 6px;
+  }
+}
+
 .md-header__topic:first-child,
 .md-typeset h1,
 .md-typeset h2 {
@@ -86,8 +98,6 @@
   display: block;
   font-family: var(--md-code-font-family);
   font-size: 0.65rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
   color: var(--oo-muted);
 }
 
@@ -107,7 +117,7 @@
 }
 
 .oo-more {
-  font-weight: 600;
+  font-weight: 500;
   padding: 0.4rem 0;
 }
 
@@ -126,23 +136,20 @@
   border-radius: 6px;
   border: 1px solid transparent;
   font: inherit;
-  font-weight: 600;
+  font-weight: 500;
   text-decoration: none;
   cursor: pointer;
 }
 
 /* Doubled with .md-typeset so they win over Material's link color inside
-   page content. */
+   page content. Accent is the one solid button; everything else is outline
+   or a text link, so the primary action on a screen is never in doubt. */
 .oo-button--accent,
 .md-typeset .oo-button--accent { background: var(--oo-accent); color: #ffffff; }
-.oo-button--ink,
-.md-typeset .oo-button--ink { background: var(--oo-ink); color: #ffffff; }
 .oo-button--outline,
 .md-typeset .oo-button--outline { border-color: var(--oo-ink); color: var(--oo-ink); background: transparent; }
 .oo-button--accent:hover,
-.oo-button--ink:hover,
-.md-typeset .oo-button--accent:hover,
-.md-typeset .oo-button--ink:hover { background: var(--oo-accent-dark); color: #ffffff; }
+.md-typeset .oo-button--accent:hover { background: var(--oo-accent-dark); color: #ffffff; }
 .oo-button--outline:hover,
 .md-typeset .oo-button--outline:hover { border-color: var(--oo-accent); color: var(--oo-accent); }
 
@@ -150,50 +157,35 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 0.3rem;
+  gap: 0.4rem;
 }
 
+/* Three badge styles only: a plain chip for facts and tags, an outlined
+   kind for what a thing is, and status for bridge and roadmap state. */
 .oo-chip {
-  padding: 0.1rem 0.45rem;
-  border-radius: 99px;
+  padding: 0.1rem 0.4rem;
+  border-radius: 4px;
   background: var(--oo-band);
   font-size: 0.65rem;
 }
 
-.oo-chip--solid { background: var(--oo-ink); color: #ffffff; }
-.oo-chip--wave { background: var(--oo-wave); }
-
 .oo-kind {
   white-space: nowrap;
-  padding: 0.05rem 0.4rem;
-  border: 1px solid var(--oo-ink);
-  border-radius: 4px;
-  font-size: 0.6rem;
-}
-
-.oo-kind--initiative {
-  border-color: var(--oo-wave);
-  background: var(--oo-wave);
-}
-
-.oo-tag {
-  padding: 0.25rem 0.5rem;
-  border: 1px solid var(--oo-ink);
+  padding: 0.1rem 0.4rem;
+  border: 1px solid var(--oo-field);
   border-radius: 4px;
   font-family: var(--md-code-font-family);
-  font-size: 0.65rem;
+  font-size: 0.6rem;
 }
-
-.oo-tag--solid { background: var(--oo-ink); color: #ffffff; }
 
 /* Bridge and roadmap status. The four states differ in fill and lightness,
    not hue alone, so they read in grayscale too. */
 .oo-status {
   display: inline-block;
-  padding: 0.05rem 0.5rem;
-  border-radius: 99px;
+  padding: 0.1rem 0.4rem;
+  border-radius: 4px;
   font-size: 0.65rem;
-  font-weight: 600;
+  font-weight: 500;
   white-space: nowrap;
 }
 
@@ -216,7 +208,7 @@
   margin: 0 0 0.6rem;
   font-family: var(--md-text-font-family);
   font-size: 0.9rem;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .oo-grid {
@@ -296,7 +288,7 @@
 
 .oo-home h1 { font-size: 3rem; letter-spacing: -0.01em; }
 .oo-home h2 { font-size: 2rem; }
-.oo-home h3 { margin: 0; font-size: 1rem; font-weight: 600; }
+.oo-home h3 { margin: 0; font-size: 1rem; font-weight: 500; }
 .oo-home p { margin: 0; }
 .oo-home a:not(.oo-button) { color: var(--oo-accent); }
 .oo-home a:not(.oo-button):hover { color: var(--oo-accent-dark); }
@@ -305,11 +297,11 @@
 .oo-home .oo-grid { grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr)); }
 
 .oo-section {
-  padding: 3.5rem 0.8rem;
+  padding: 3.6rem 0.8rem;
   box-sizing: border-box;
 }
 
-.oo-section--tight { padding-top: 0.4rem; padding-bottom: 2.8rem; }
+.oo-section--tight { padding-top: 0.4rem; padding-bottom: 0; }
 
 .oo-section__head {
   display: flex;
@@ -346,7 +338,7 @@
   min-width: 0;
   display: flex;
   flex-direction: column;
-  gap: 1.1rem;
+  gap: 1.2rem;
 }
 
 .oo-hero__figure {
@@ -364,7 +356,7 @@
 }
 
 .oo-hero__figure figcaption {
-  margin-top: 0.5rem;
+  margin-top: 0.4rem;
   font-family: var(--md-code-font-family);
   font-size: 0.65rem;
   color: var(--oo-muted);
@@ -373,7 +365,7 @@
 .oo-wave {
   display: block;
   width: 100%;
-  height: 4.5rem;
+  height: 4.4rem;
   fill: none;
   stroke: var(--oo-wave);
   stroke-width: 2;
@@ -401,7 +393,7 @@
   min-width: 0;
   min-height: 2.4rem;
   box-sizing: border-box;
-  padding: 0 0.7rem;
+  padding: 0 0.6rem;
   border: 1px solid var(--oo-field);
   border-radius: 6px;
   font: inherit;
@@ -447,7 +439,7 @@
   counter-increment: oo-service;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.4rem;
 }
 
 .oo-services li::before {
@@ -471,7 +463,7 @@
   min-width: 0;
   display: flex;
   flex-direction: column;
-  gap: 0.9rem;
+  gap: 0.8rem;
 }
 
 .oo-split__text p { color: var(--oo-muted); }
@@ -528,7 +520,7 @@
 .oo-newsletter {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.4rem;
 }
 
 /* In a column, the shared input rule's flex-basis would become a height. */
@@ -553,7 +545,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 0.4rem;
-  padding: 0.7rem 0;
+  padding: 0.8rem 0;
   border-top: 1px solid var(--oo-line);
 }
 
@@ -600,7 +592,7 @@
   min-width: 0;
   display: flex;
   flex-direction: column;
-  gap: 0.3rem;
+  gap: 0.4rem;
 }
 
 .oo-event__body p { font-size: 0.75rem; color: var(--oo-muted); }
@@ -626,7 +618,7 @@
   border-top: 1px solid var(--oo-line);
 }
 
-.oo-crew__list strong { font-weight: 600; }
+.oo-crew__list strong { font-weight: 500; }
 .oo-crew__list span { color: var(--oo-muted); }
 
 /* ---------- Directory ---------- */
@@ -644,7 +636,7 @@
   min-width: 0;
   display: flex;
   flex-wrap: wrap;
-  gap: 0.3rem;
+  gap: 0.4rem;
 }
 
 .oo-directory__filters {
@@ -659,7 +651,7 @@
   min-height: 2.2rem;
   padding: 0 0.8rem;
   border: 1px solid var(--oo-field);
-  border-radius: 99px;
+  border-radius: 6px;
   background: #ffffff;
   color: var(--oo-ink);
   font: inherit;
@@ -668,10 +660,10 @@
 }
 
 .oo-filter[aria-pressed="true"] {
-  border-color: var(--oo-ink);
-  background: var(--oo-ink);
+  border-color: var(--oo-accent);
+  background: var(--oo-accent);
   color: #ffffff;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .oo-directory__empty {
@@ -729,7 +721,7 @@
 .oo-facts {
   display: grid;
   grid-template-columns: auto 1fr;
-  gap: 0.4rem 0.7rem;
+  gap: 0.4rem 0.8rem;
   margin: 0;
   font-size: 0.75rem;
 }
@@ -769,7 +761,7 @@
   font-size: 0.75rem;
 }
 
-.md-typeset ul.oo-linklist li { margin: 0.3rem 0; font-weight: 600; }
+.md-typeset ul.oo-linklist li { margin: 0.4rem 0; font-weight: 500; }
 
 /* ---------- Team ---------- */
 
@@ -818,7 +810,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 0.3rem;
+  gap: 0.4rem;
   padding: 1rem;
   border: 1px solid var(--oo-line);
   border-radius: var(--oo-radius);
@@ -877,7 +869,7 @@
 .oo-stage {
   flex: 1 1 7rem;
   min-width: 0;
-  padding: 0.7rem;
+  padding: 0.8rem;
   border-radius: 8px;
   font-size: 0.7rem;
 }
@@ -914,7 +906,7 @@
   flex: 1 1 8rem;
   display: flex;
   flex-direction: column;
-  gap: 0.3rem;
+  gap: 0.4rem;
 }
 
 .oo-footer a { color: var(--oo-deep-text); }

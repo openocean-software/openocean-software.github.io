@@ -16,17 +16,14 @@
     <div class="oo-hero__inner md-grid">
       <div class="oo-hero__text">
         <div class="oo-eyebrow">NSF POSE project · open-source marine robotics</div>
-        <h1 id="oo-hero-title">The home port for open-source marine robotics.</h1>
+        <h1 id="oo-hero-title">The home port for open-source marine robotics</h1>
         <p class="oo-lede">Open Ocean Software brings together the people and projects behind autonomy, middleware, and communications for AUVs, ASVs, moorings, and drifters. Find a project, connect your stack, and help set the standards.</p>
         <form class="oo-search" role="search" action="{{ 'projects/' | url }}" method="get">
           <label for="oo-hub-search">Search member projects</label>
           <input id="oo-hub-search" name="q" type="search" placeholder="e.g. acoustic comms, ROS 2, autonomy">
           <button type="submit" class="oo-button oo-button--accent">Search</button>
         </form>
-        <div class="oo-actions">
-          <a class="oo-button oo-button--ink" href="{{ 'projects/' | url }}">Browse member projects</a>
-          <a class="oo-button oo-button--outline" href="{{ config.extra.forum_url | e }}">Join the forum</a>
-        </div>
+        <a class="oo-more" href="{{ 'projects/' | url }}">Browse all member projects →</a>
       </div>
       <figure class="oo-hero__figure">
         <img src="{{ 'assets/community-day26-auv-photo.jpg' | url }}" alt="Yellow autonomous underwater vehicle at the surface with a tow cable attached to its nose">
@@ -87,10 +84,10 @@
   <section class="md-grid oo-section oo-split" aria-labelledby="oo-interop-title">
     <div class="oo-split__text">
       <div class="oo-eyebrow">openocean-messages</div>
-      <h2 id="oo-interop-title">One message set. Native types for every stack.</h2>
+      <h2 id="oo-interop-title">One message set, native types for every stack</h2>
       <p>Write <code>Navigation</code> once in Protobuf. Get first-class ROS 2 and LCM types with no Protobuf at runtime, plus C++, Python, Rust, and nanopb for embedded C.</p>
       <div class="oo-chips">
-        <span class="oo-tag">C++</span><span class="oo-tag">Python</span><span class="oo-tag">Rust</span><span class="oo-tag">C (nanopb)</span><span class="oo-tag oo-tag--solid">ROS 2 msg</span><span class="oo-tag oo-tag--solid">LCM</span>
+        <span class="oo-kind">C++</span><span class="oo-kind">Python</span><span class="oo-kind">Rust</span><span class="oo-kind">C (nanopb)</span><span class="oo-kind">ROS 2 msg</span><span class="oo-kind">LCM</span>
       </div>
       <a class="oo-more" href="{{ 'toolkit/' | url }}">Explore the toolkit →</a>
     </div>
@@ -140,7 +137,7 @@ nav.speed.add(value=1.5,
             <p>Key events and updates. Infrequent, by design.</p>
             <label for="oo-nl-email">Email address</label>
             <input id="oo-nl-email" type="email" name="email" placeholder="you@example.org" required>
-            <button type="submit" class="oo-button oo-button--ink">Subscribe</button>
+            <button type="submit" class="oo-button oo-button--accent">Subscribe</button>
           </form>
           <div class="oo-panel">
             <div class="oo-eyebrow">Survey · 8–10 min</div>

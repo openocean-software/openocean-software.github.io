@@ -31,14 +31,13 @@
       <span class="oo-eyebrow">{{ p.category | e }}</span>
       <span class="oo-kind">{{ ("Member" if p.kind == "member" else "Open Ocean") | e }}</span>
       {% for t in p.tags or [] %}<span class="oo-chip">{{ t | e }}</span>{% endfor %}
-      {% if p.apt_packages %}<span class="oo-chip oo-chip--solid">apt package</span>{% endif %}
+      {% if p.apt_packages %}<span class="oo-chip">apt package</span>{% endif %}
       {% if p.stage %}<span class="oo-chip">Stage: {{ stage_labels[p.stage] | e }}</span>{% endif %}
     </div>
     <h1>{{ p.name | e }}</h1>
     <p class="oo-lede">{{ p.summary | e }}</p>
     <div class="oo-actions">
       {% if p.apt_packages %}<a class="oo-button oo-button--accent" href="#install">Install with apt</a>{% endif %}
-      {% for l in p.links or [] %}<a class="oo-button oo-button--outline" href="{{ l.url | e }}">{{ l.label | e }}</a>{% endfor %}
       <a class="oo-more" href="{{ config.extra.forum_url | e }}">Discuss on the forum →</a>
     </div>
   </header>

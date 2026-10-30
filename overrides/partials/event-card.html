@@ -4,7 +4,7 @@
 -#}
 <article class="oo-event{% if slot %} oo-event--upcoming{% endif %}">
   <div class="oo-event__date" aria-hidden="true">
-    <span>{{ e.date.strftime("%b") | upper | e }}</span>
+    <span>{{ e.date.strftime("%b") | e }}</span>
     <span class="oo-event__day">{{ e.date.strftime("%d") | e }}</span>
     <span>{{ e.date.year | e }}</span>
   </div>
