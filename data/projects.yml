@@ -58,6 +58,25 @@
     - {label: GitLab, url: "https://git.whoi.edu/whoi-ros"}
   issues: "https://git.whoi.edu/whoi-ros"
 
+- slug: ros-acomms
+  name: ros_acomms
+  kind: member
+  category: Acoustic comms
+  filter: ros
+  summary: >-
+    ROS interface to the WHOI Micromodem and transport of ROS messages across
+    an acoustic link, with simulation. Supports ROS 1 and ROS 2.
+  language: Python
+  middleware: ROS 1, ROS 2
+  license: LGPL-3.0 / AGPL-3.0
+  latest_release: v17.0.0
+  maintainer: Eric Gallimore
+  affiliation: WHOI
+  tags: [Python, ROS 2, Acoustic comms]
+  links:
+    - {label: Docs, url: "https://acomms.pages.whoi.edu/ros_acomms"}
+    - {label: GitLab, url: "https://git.whoi.edu/acomms/ros_acomms"}
+
 - slug: goby3
   name: Goby3
   kind: member

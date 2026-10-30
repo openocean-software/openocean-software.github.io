@@ -36,6 +36,7 @@ nav:
         - projects/index.md
         - MOOS-IvP: projects/moos-ivp.md
         - WHOI-ROS: projects/whoi-ros.md
+        - ros_acomms: projects/ros-acomms.md
         - Goby3: projects/goby3.md
         - DCCL: projects/dccl.md
     - Toolkit: toolkit.md
