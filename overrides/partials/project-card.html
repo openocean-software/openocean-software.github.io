@@ -15,7 +15,7 @@
   <p class="oo-card__summary">{{ p.summary | e }}</p>
   <div class="oo-chips">
     {% for t in p.tags or [] %}<span class="oo-chip">{{ t | e }}</span>{% endfor %}
-    {% if p.apt_packages %}<span class="oo-chip">apt package</span>{% endif %}
+    {% if p.apt_packages or p.apt_url %}<span class="oo-chip">apt package</span>{% endif %}
     {% if p.scorecard %}<span class="oo-chip">OpenSSF Scorecard</span>{% endif %}
     {% if p.license %}<span class="oo-chip">{{ p.license | e }}</span>{% endif %}
   </div>

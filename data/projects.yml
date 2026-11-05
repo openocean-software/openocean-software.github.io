@@ -21,7 +21,8 @@
 # Other optional fields: language, middleware, license, latest_release,
 # affiliation, tags, links, issues (tracker URL), scorecard (github.com/org/repo
 # for the OpenSSF badge), apt_packages (marks the project as apt-packaged:
-# chip, install button, signing key in the trust panel).
+# chip, install button, signing key in the trust panel), apt_url (same, for a
+# project with no #install section yet: the button links here instead).
 
 - slug: moos-ivp
   name: MOOS-IvP
@@ -109,6 +110,7 @@
   affiliation: GobySoft
   tags: [C++, Acoustic comms]
   scorecard: github.com/GobySoft/dccl
+  apt_url: "https://apt.oceansoft.org"
   links:
     - {label: Website, url: "https://libdccl.org/4.0/"}
     - {label: GitHub, url: "https://github.com/GobySoft/dccl"}

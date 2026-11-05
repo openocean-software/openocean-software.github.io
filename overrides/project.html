@@ -31,13 +31,14 @@
       <span class="oo-eyebrow">{{ p.category | e }}</span>
       <span class="oo-kind">{{ ("Member" if p.kind == "member" else "Open Ocean") | e }}</span>
       {% for t in p.tags or [] %}<span class="oo-chip">{{ t | e }}</span>{% endfor %}
-      {% if p.apt_packages %}<span class="oo-chip">apt package</span>{% endif %}
+      {% if p.apt_packages or p.apt_url %}<span class="oo-chip">apt package</span>{% endif %}
       {% if p.stage %}<span class="oo-chip">Stage: {{ stage_labels[p.stage] | e }}</span>{% endif %}
     </div>
     <h1>{{ p.name | e }}</h1>
     <p class="oo-lede">{{ p.summary | e }}</p>
     <div class="oo-actions">
-      {% if p.apt_packages %}<a class="oo-button oo-button--accent" href="#install">Install with apt</a>{% endif %}
+      {% if p.apt_packages %}<a class="oo-button oo-button--accent" href="#install">Install with apt</a>
+      {% elif p.apt_url %}<a class="oo-button oo-button--accent" href="{{ p.apt_url | e }}">Install with apt</a>{% endif %}
       <a class="oo-more" href="{{ config.extra.forum_url | e }}">Discuss on the forum →</a>
     </div>
   </header>
@@ -71,15 +72,15 @@
           {% if p.language %}<dt>Language</dt><dd>{{ p.language | e }}</dd>{% endif %}
           {% if p.middleware %}<dt>Middleware</dt><dd>{{ p.middleware | e }}</dd>{% endif %}
           {% if p.license %}<dt>License</dt><dd>{{ p.license | e }}</dd>{% endif %}
-          {% if p.apt_packages %}<dt>Packages</dt><dd>Debian, Ubuntu</dd>{% endif %}
+          {% if p.apt_packages or p.apt_url %}<dt>Packages</dt><dd>Debian, Ubuntu</dd>{% endif %}
           {% if p.latest_release %}<dt>Latest release</dt><dd>{{ p.latest_release | e }}</dd>{% endif %}
           {% if p.issues %}<dt>Issues</dt><dd><a href="{{ p.issues | e }}">Tracker</a></dd>{% endif %}
         </dl>
       </div>
-      {% if p.apt_packages or p.scorecard %}
+      {% if p.apt_packages or p.apt_url or p.scorecard %}
         <div class="oo-panel">
           <h2>Signing and security</h2>
-          {% if p.apt_packages %}
+          {% if p.apt_packages or p.apt_url %}
             <div class="oo-meta">Package signing key</div>
             {# From extra.signing_key in mkdocs.yml, printed in groups of four like gpg does. #}
             {% set fp = config.extra.signing_key.fingerprint %}
