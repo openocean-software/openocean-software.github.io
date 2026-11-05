@@ -1,3 +1,8 @@
+---
+hide:
+  - navigation
+---
+
 # DevSecOps
 
 We are committed to supporting secure build pipelines for our member projects:

@@ -2,6 +2,7 @@
 title: Team
 template: team.html
 hide:
+  - navigation
   - toc
 ---
 

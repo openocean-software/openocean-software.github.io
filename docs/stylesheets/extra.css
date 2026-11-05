@@ -856,6 +856,14 @@
 .oo-stage--estuary { background: var(--oo-wave); }
 .oo-stage--bay { background: #3f55d0; color: #ffffff; } /* 6.1:1 with white text */
 .oo-stage--ocean { background: var(--oo-accent); color: #ffffff; }
+/* Same as the toolkit pipeline: color the text itself so a theme or browser
+   rule on p or strong can't leave the title dark on the blue box. */
+.md-typeset .oo-stage--bay p,
+.md-typeset .oo-stage--bay strong,
+.md-typeset .oo-stage--ocean p,
+.md-typeset .oo-stage--ocean strong { color: #ffffff; }
+.md-typeset .oo-stage--bay strong,
+.md-typeset .oo-stage--ocean strong { font-weight: 600; }
 
 /* ---------- Footer ---------- */
 
