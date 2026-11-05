@@ -120,8 +120,8 @@
   category: Packaging
   filter: oos
   summary: >-
-    Secure build pipeline and signed apt repository for member projects.
-    MOOS-IvP for Debian and Ubuntu today.
+    Builds and signs apt packages for member projects. MOOS-IvP and DCCL
+    are ready on Debian and Ubuntu today.
   maintainer: Open Ocean Software
   tags: [Debian, Ubuntu]
   page: devsecops/

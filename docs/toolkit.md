@@ -34,7 +34,7 @@ Member projects keep a working build (CMake, `pyproject.toml`, etc.) and a tagge
 
 | Tier | Targets | Status |
 |---|---|---|
-| Tier 1 | Debian and Ubuntu (`.deb`) | <span class="oo-status oo-status--demo">In progress</span> MOOS-IvP available now |
+| Tier 1 | Debian and Ubuntu (`.deb`) | <span class="oo-status oo-status--demo">In progress</span> MOOS-IvP and DCCL ready to install |
 | Tier 2 | OpenEmbedded (Yocto), Homebrew | <span class="oo-status oo-status--adhoc">Planned</span> |
 
 Install steps and the full signing key are on the [DevSecOps](devsecops.md) page.

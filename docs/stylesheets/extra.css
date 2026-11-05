@@ -787,6 +787,10 @@
 .md-typeset .oo-pipeline__step p { margin: 0; }
 .oo-pipeline__step--source { border-color: var(--oo-ink); }
 .oo-pipeline__step--ink { border-color: var(--oo-ink); background: var(--oo-ink); color: var(--oo-deep-text); }
+/* Color the text itself too, so a theme or browser rule on p or strong
+   cant leave the title dark on the dark box. */
+.md-typeset .oo-pipeline__step--ink p,
+.md-typeset .oo-pipeline__step--ink strong { color: var(--oo-deep-text); }
 .oo-pipeline__step--ink .oo-eyebrow,
 .oo-pipeline__step--ink .oo-meta { color: var(--oo-deep-muted); }
 .md-typeset .oo-pipeline__step--ink code { background: transparent; color: var(--oo-deep-text); }
