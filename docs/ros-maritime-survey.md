@@ -1,3 +1,8 @@
+---
+hide:
+  - navigation
+---
+
 # Community Survey
 
 The ROS Maritime Robotics Community Pulse Survey helps us understand the current needs and priorities of the maritime robotics community. Your responses are anonymized and shared in aggregate.

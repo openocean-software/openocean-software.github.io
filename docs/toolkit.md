@@ -1,14 +1,43 @@
-# DevSecOps
+---
+title: Toolkit
+hide:
+  - navigation
+---
 
-We are committed to supporting secure build pipelines for our member projects:
+# Toolkit
 
-![](assets/openocean-build.png)
+The build pipeline, the signed apt repository and the public plan. All of it is open source under the [openocean-software](https://github.com/openocean-software) GitHub organization.
 
-**As this is a work in progress, only MOOS-IvP for Debian/Ubuntu is currently available.**
+## Packages
 
-The configuration for this work is in the [openocean-build](https://github.com/openocean-software/openocean-build/) project.
+Member projects keep a working build (CMake, `pyproject.toml`, etc.) and a tagged release schedule. The [openocean-build](https://github.com/openocean-software/openocean-build) pipeline builds, signs, and publishes the packages to `apt.oceansoft.org`.
 
-## Apt Packages
+<div class="oo-pipeline" markdown>
+<div class="oo-pipeline__step" markdown>
+**Member project**
+
+<span class="oo-meta">git, a working build, tagged releases</span>
+</div>
+<div class="oo-pipeline__arrow" aria-hidden="true">→</div>
+<div class="oo-pipeline__step oo-pipeline__step--source" markdown>
+**Open Ocean pipeline**
+
+<span class="oo-meta">sbuild in Docker, Debian packaging, GPG signing</span>
+</div>
+<div class="oo-pipeline__arrow" aria-hidden="true">→</div>
+<div class="oo-pipeline__step oo-pipeline__step--ink" markdown>
+**apt.oceansoft.org**
+
+<span class="oo-meta">Debian stable, oldstable, Ubuntu LTS</span>
+</div>
+</div>
+
+| Tier | Targets | Status |
+|---|---|---|
+| Tier 1 | Debian and Ubuntu (`.deb`) | <span class="oo-status oo-status--demo">In progress</span> MOOS-IvP and DCCL ready to install |
+| Tier 2 | OpenEmbedded (Yocto), Homebrew | <span class="oo-status oo-status--adhoc">Planned</span> |
+
+### Install from apt.oceansoft.org { #apt-packages }
 
 !!! warning "Trust"
 
@@ -20,7 +49,7 @@ For Debian stable/oldstable and Ubuntu active LTS releases:
   ```
   OOS_KEY=D7D7224D53A4F29E303FE01DEB505B68A5D063B0
   OOS_KEYRING=/etc/apt/keyrings/oceansoft.gpg
-  gpg --keyserver keyserver.ubuntu.com --recv-keys $OOS_KEY && gpg --export $OOS_KEY > $OOS_KEYRING
+  gpg --keyserver keyserver.ubuntu.com --recv-keys $OOS_KEY && gpg --export $OOS_KEY | sudo tee $OOS_KEYRING > /dev/null
   ```
 - Add `apt` sources:
   ```
@@ -41,7 +70,7 @@ For Debian stable/oldstable and Ubuntu active LTS releases:
   lz4cat /var/lib/apt/lists/apt.oceansoft.org*_Packages.lz4
   ```
 
-## GPG signing public key
+### Signing key { #gpg-signing-public-key }
 
 <a href="https://xkcd.com/1553/"><img title="I guess I should be signing stuff, but I've never been sure what to sign. Maybe if I post my private key, I can crowdsource my decisions about what to sign." src="https://imgs.xkcd.com/comics/public_key.png"/></a>
 
@@ -119,3 +148,16 @@ Currently used to sign Debian/Ubuntu packages posted to http://apt.oceansoft.org
      =E/xS
      -----END PGP PUBLIC KEY BLOCK-----
      ```
+
+## Roadmap
+
+The plan is public in [openocean-plan](https://github.com/openocean-software/openocean-plan). The technical goals come from 114 interviews with people in academia, industry and government, described in the [AUV26 paper](https://github.com/openocean-software/openocean-plan/blob/main/papers/OpenOcean_IEEE_AUV_2026_Paper-FINAL.pdf). Comment on any of them on the [forum](https://forum.oceansoft.org).
+
+| Goal | Status | What it gives member projects |
+|---|---|---|
+| [Middleware interoperability](https://github.com/openocean-software/openocean-plan/blob/main/technical/middleware-interoperability.md) | <span class="oo-status oo-status--demo">In progress</span> | Common message set and maintained bridges |
+| [Linux packages](https://github.com/openocean-software/openocean-plan/blob/main/technical/devops-technical-support.md) | <span class="oo-status oo-status--demo">In progress</span> | Shared, signed apt repository |
+| [Continuous integration](https://github.com/openocean-software/openocean-plan/blob/main/technical/devops-technical-support.md) | <span class="oo-status oo-status--adhoc">Planned</span> | Shared CI templates and maturity badges |
+| [Embedded builds](https://github.com/openocean-software/openocean-plan/blob/main/technical/devops-technical-support.md) | <span class="oo-status oo-status--adhoc">Planned</span> | Raspberry Pi and ARM builds in CI |
+| [Docker images](https://github.com/openocean-software/openocean-plan/blob/main/technical/devops-technical-support.md) | <span class="oo-status oo-status--adhoc">Planned</span> | Dockerfile templates and multi-arch images |
+| [Data QA/QC and FAIR data](https://github.com/openocean-software/openocean-plan/blob/main/technical/fair-data-qa-qc.md) | <span class="oo-status oo-status--adhoc">Planned</span> | QC checklists, metadata templates, provenance |

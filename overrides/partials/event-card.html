@@ -1,0 +1,21 @@
+{#-
+  One event card for the home and events pages. Expects `e` (an entry from
+  data/events.yml) and `slot` ("Next", "Upcoming" or None for past events).
+-#}
+<article class="oo-event{% if slot %} oo-event--upcoming{% endif %}">
+  <div class="oo-event__date" aria-hidden="true">
+    <span>{{ e.date.strftime("%b") | e }}</span>
+    <span class="oo-event__day">{{ e.date.strftime("%d") | e }}</span>
+    <span>{{ e.date.year | e }}</span>
+  </div>
+  <div class="oo-event__body">
+    <div class="oo-eyebrow{% if slot %} oo-eyebrow--accent{% endif %}">{% if slot %}{{ slot | e }} · {% endif %}{{ (e.kind or "Event") | e }}</div>
+    <h3>
+      {% if e.page %}<a href="{{ e.page | url | e }}">{{ e.name | e }}</a>
+      {% elif e.url %}<a href="{{ e.url | e }}">{{ e.name | e }}</a>
+      {% else %}{{ e.name | e }}{% endif %}
+    </h3>
+    <p><time datetime="{{ e.date.isoformat() | e }}">{{ e.date.day | e }} {{ e.date.strftime("%B %Y") | e }}</time> · {{ e.venue | e }}</p>
+    {% if e.summary %}<p>{{ e.summary | e }}</p>{% endif %}
+  </div>
+</article>

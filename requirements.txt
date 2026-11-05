@@ -1,0 +1,6 @@
+# Site build, shared by the deploy and check workflows.
+# mkdocs stays below 2.0: the Material team warns 2.0 removes the plugin and
+# theme-override system this site depends on (overrides/, hooks/, redirects).
+mkdocs>=1.6,<2
+mkdocs-material>=9.7,<10
+mkdocs-redirects>=1.2

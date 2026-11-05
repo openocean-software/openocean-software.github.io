@@ -1,0 +1,30 @@
+{#-
+  Events page (events.md), rendered from data/events.yml with the same cards
+  as the home page, which only shows the last three past events.
+  hooks/oceansoft.py splits the list on build date.
+-#}
+{% extends "main.html" %}
+
+{% block content %}
+  {{ page.content }}
+  <h2 id="upcoming">Upcoming</h2>
+  {% if config.extra.events_upcoming %}
+    <div class="oo-events">
+      {% for e in config.extra.events_upcoming %}
+        {% set slot = "Next" if loop.first else "Upcoming" %}
+        {% include "partials/event-card.html" %}
+      {% endfor %}
+    </div>
+  {% else %}
+    <p>None scheduled yet. <a href="{{ config.extra.forum_url | e }}">Watch the forum for new dates.</a></p>
+  {% endif %}
+  {% if config.extra.events_recent %}
+    <h2 id="past">Past</h2>
+    <div class="oo-events">
+      {% for e in config.extra.events_recent %}
+        {% set slot = None %}
+        {% include "partials/event-card.html" %}
+      {% endfor %}
+    </div>
+  {% endif %}
+{% endblock %}
