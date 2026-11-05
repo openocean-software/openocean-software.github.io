@@ -187,11 +187,11 @@ def test_directory_marker_missing_fails():
         hooks.check_directory_marker("<p>Cards: [[directory]]</p>", page_path="projects/index.md")
 
 
-def test_fingerprint_must_match_devsecops_page():
+def test_fingerprint_must_match_toolkit_page():
     fp = "D7D7224D53A4F29E303FE01DEB505B68A5D063B0"
-    hooks.check_fingerprint_in_page(f"OOS_KEY={fp}", fp, page_path="devsecops.md")
+    hooks.check_fingerprint_in_page(f"OOS_KEY={fp}", fp, page_path="toolkit.md")
     with pytest.raises(ValueError, match="update both together"):
-        hooks.check_fingerprint_in_page("OOS_KEY=0000", fp, page_path="devsecops.md")
+        hooks.check_fingerprint_in_page("OOS_KEY=0000", fp, page_path="toolkit.md")
 
 
 def test_repo_data_files_load():

@@ -11,7 +11,7 @@ hide:
 
 Signed binary packages for Debian stable/oldstable and Ubuntu active LTS releases, built by the Open Ocean pipeline from tagged MOOS-IvP releases. Packaging lives in [openocean-build](https://github.com/openocean-software/openocean-build/tree/main/projects/moos-ivp/debian).
 
-1. Add the Open Ocean apt repository and signing key: follow the [apt setup steps](../devsecops.md#apt-packages) on the DevSecOps page.
+1. Add the Open Ocean apt repository and signing key: follow the [apt setup steps](../toolkit.md#apt-packages) on the Toolkit page.
 2. Install the helm, apps, and GUI tools:
 
     ```bash

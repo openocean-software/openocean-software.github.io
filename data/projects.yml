@@ -126,6 +126,6 @@
     are ready on Debian and Ubuntu today.
   maintainer: Open Ocean Software
   tags: [Debian, Ubuntu]
-  page: devsecops/
+  page: toolkit/
   links:
     - {label: GitHub, url: "https://github.com/openocean-software/openocean-build"}

@@ -85,7 +85,7 @@
             {# From extra.signing_key in mkdocs.yml, printed in groups of four like gpg does. #}
             {% set fp = config.extra.signing_key.fingerprint %}
             <code class="oo-fingerprint">{% for i in range(0, fp | length, 4) %}{{ fp[i:i + 4] | e }}{% if not loop.last %} {% endif %}{% endfor %}</code>
-            <a href="{{ 'devsecops/' | url }}#gpg-signing-public-key">Verify the key</a>
+            <a href="{{ 'toolkit/' | url }}#gpg-signing-public-key">Verify the key</a>
           {% endif %}
           {% if p.scorecard %}
             <div class="oo-meta">OpenSSF Scorecard</div>

@@ -81,13 +81,13 @@ def on_config(config: Any, **kwargs: Any) -> Any:
 
 
 def on_page_markdown(markdown: str, page: Any, config: Any, **kwargs: Any) -> str:
-    """Fail the build if devsecops.md and mkdocs.yml disagree on the signing key.
+    """Fail the build if toolkit.md and mkdocs.yml disagree on the signing key.
 
-    The fingerprint is written out in prose on the DevSecOps page and read from
+    The fingerprint is written out in prose on the Toolkit page and read from
     ``extra.signing_key`` by the project page trust panel; a key rotation that
     updates only one of them would show users a stale fingerprint.
     """
-    if page.file.src_path == "devsecops.md":
+    if page.file.src_path == "toolkit.md":
         check_fingerprint_in_page(markdown, config.extra["signing_key"]["fingerprint"], page_path=page.file.src_path)
     return markdown
 

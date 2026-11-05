@@ -29,6 +29,7 @@ plugins:
   - redirects:
       redirect_maps:
         member-projects.md: projects/index.md
+        devsecops.md: toolkit.md
 
 nav:
     - Home: index.md
@@ -47,7 +48,6 @@ nav:
         - Community Day UK, 4 Sep 2026: community-day-uk-2026.md
     - team.md
     - Survey: ros-maritime-survey.md
-    - DevSecOps: devsecops.md
     - Forum: https://forum.oceansoft.org
 
 markdown_extensions:
@@ -75,7 +75,7 @@ extra:
     link: https://github.com/openocean-software/
   generator: false
   # Shown in the project page trust panel. hooks/oceansoft.py fails the build
-  # if devsecops.md doesn't carry the same fingerprint, so rotate both at once.
+  # if toolkit.md doesn't carry the same fingerprint, so rotate both at once.
   signing_key:
     fingerprint: D7D7224D53A4F29E303FE01DEB505B68A5D063B0
 
