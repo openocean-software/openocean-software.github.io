@@ -564,6 +564,10 @@
 }
 
 .oo-event__body p { font-size: 0.75rem; color: var(--oo-muted); }
+/* The events page puts cards inside page content, where Material adds its own
+   heading and paragraph margins. The flex gap above does the spacing. */
+.md-typeset .oo-event__body h3,
+.md-typeset .oo-event__body p { margin: 0; }
 
 .oo-crew { border-top: 1px solid var(--oo-line); }
 
