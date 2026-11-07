@@ -1,0 +1,1352 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://oceansoft.org/toolkit/">
+      
+      
+        <link rel="prev" href="../projects/dccl/">
+      
+      
+        <link rel="next" href="../join/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
+    
+    
+      
+        <title>Toolkit - Open Ocean Software</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,300i,400,400i,700,700i%7CIBM+Plex+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"IBM Plex Sans";--md-code-font:"IBM Plex Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap">
+
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#toolkit" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Open Ocean Software" class="md-header__button md-logo" aria-label="Open Ocean Software" data-md-component="logo">
+      
+  <img src="../assets/openocean-logo-no-text.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Open Ocean Software
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Toolkit
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../projects/" class="md-tabs__link">
+          
+  
+  
+  Projects
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Toolkit
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../join/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Join
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../events/" class="md-tabs__link">
+          
+  
+  
+  Events
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../team/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Team
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../ros-maritime-survey/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Survey
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="https://forum.oceansoft.org" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Forum
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Open Ocean Software" class="md-nav__button md-logo" aria-label="Open Ocean Software" data-md-component="logo">
+      
+  <img src="../assets/openocean-logo-no-text.svg" alt="logo">
+
+    </a>
+    Open Ocean Software
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Projects
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Projects
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../projects/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Member projects
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../projects/moos-ivp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MOOS-IvP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../projects/whoi-ros/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WHOI-ROS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../projects/ros-acomms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ros_acomms
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../projects/goby3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Goby3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../projects/dccl/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DCCL
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Toolkit
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Toolkit
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#packages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Packages
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Packages">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#apt-packages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Install from apt.oceansoft.org
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gpg-signing-public-key" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Signing key
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#roadmap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Roadmap
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../join/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Join
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Events
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Events
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../events/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Events
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://monterey26.oceansconference.org/town-halls-2026/#3d43e3378637c32a6" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OCEANS Town Hall, 23 Sep 2026
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../community-day-uk-2026/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Community Day UK, 4 Sep 2026
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../team/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Team
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ros-maritime-survey/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Survey
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://forum.oceansoft.org" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Forum
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#packages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Packages
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Packages">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#apt-packages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Install from apt.oceansoft.org
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gpg-signing-public-key" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Signing key
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#roadmap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Roadmap
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+  
+
+
+
+
+<h1 id="toolkit">Toolkit</h1>
+<p>The build pipeline, the signed apt repository and the public plan. All of it is open source under the <a href="https://github.com/openocean-software">openocean-software</a> GitHub organization.</p>
+<h2 id="packages">Packages</h2>
+<p>Member projects keep a working build (CMake, <code>pyproject.toml</code>, etc.) and a tagged release schedule. The <a href="https://github.com/openocean-software/openocean-build">openocean-build</a> pipeline builds, signs, and publishes the packages to <code>apt.oceansoft.org</code>.</p>
+<div class="oo-pipeline">
+<div class="oo-pipeline__step">
+<p><strong>Member project</strong></p>
+<p><span class="oo-meta">git, a working build, tagged releases</span></p>
+</div>
+<div aria-hidden="true" class="oo-pipeline__arrow">→</div>
+<div class="oo-pipeline__step oo-pipeline__step--source">
+<p><strong>Open Ocean pipeline</strong></p>
+<p><span class="oo-meta">sbuild in Docker, Debian packaging, GPG signing</span></p>
+</div>
+<div aria-hidden="true" class="oo-pipeline__arrow">→</div>
+<div class="oo-pipeline__step oo-pipeline__step--ink">
+<p><strong>apt.oceansoft.org</strong></p>
+<p><span class="oo-meta">Debian stable, oldstable, Ubuntu LTS</span></p>
+</div>
+</div>
+<table>
+<thead>
+<tr>
+<th>Tier</th>
+<th>Targets</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tier 1</td>
+<td>Debian and Ubuntu (<code>.deb</code>)</td>
+<td><span class="oo-status oo-status--demo">In progress</span> MOOS-IvP and DCCL ready to install</td>
+</tr>
+<tr>
+<td>Tier 2</td>
+<td>OpenEmbedded (Yocto), Homebrew</td>
+<td><span class="oo-status oo-status--adhoc">Planned</span></td>
+</tr>
+</tbody>
+</table>
+<h3 id="apt-packages">Install from apt.oceansoft.org</h3>
+<div class="admonition warning">
+<p class="admonition-title">Trust</p>
+<p>These instructions assume oceansoft.org hasn't been compromised (and thus lists the correct GPG fingerprint: <code>OOS_KEY</code>). This is normally a safe assumption, but if your security requirements call for it, consider independently verifying <a href="#gpg-signing-public-key">our signing key</a>, e.g. using Keybase or other out-of-band techniques.</p>
+</div>
+<p>For Debian stable/oldstable and Ubuntu active LTS releases:</p>
+<ul>
+<li>Get the signing key (<a href="#gpg-signing-public-key">details</a>):
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>OOS_KEY=D7D7224D53A4F29E303FE01DEB505B68A5D063B0
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>OOS_KEYRING=/etc/apt/keyrings/oceansoft.gpg
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>gpg --keyserver keyserver.ubuntu.com --recv-keys $OOS_KEY &amp;&amp; gpg --export $OOS_KEY | sudo tee $OOS_KEYRING &gt; /dev/null
+</code></pre></div></li>
+<li>Add <code>apt</code> sources:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>DISTRO=$(. /etc/os-release; echo "$ID")             # "ubuntu" or "debian"
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>DIST=$(. /etc/os-release; echo "$VERSION_CODENAME") # e.g., "resolute"
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>REPO=http://apt.oceansoft.org/$DISTRO-$DIST/
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>echo "deb [signed-by=$OOS_KEYRING] $REPO $DIST main" | sudo tee /etc/apt/sources.list.d/oceansoft.list
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>sudo apt update
+</code></pre></div></li>
+<li>
+<p>Install packages:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>apt install ...
+</code></pre></div></p>
+</li>
+<li>
+<p>Full list of packages available:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>apt install lz4
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>lz4cat /var/lib/apt/lists/apt.oceansoft.org*_Packages.lz4
+</code></pre></div></p>
+</li>
+</ul>
+<h3 id="gpg-signing-public-key">Signing key</h3>
+<p><a href="https://xkcd.com/1553/"><img title="I guess I should be signing stuff, but I've never been sure what to sign. Maybe if I post my private key, I can crowdsource my decisions about what to sign." src="https://imgs.xkcd.com/comics/public_key.png"/></a></p>
+<p>Currently used to sign Debian/Ubuntu packages posted to http://apt.oceansoft.org.</p>
+<ul>
+<li>User: Toby Schneider (<a href="https://keybase.io/tsaubergine">tsaubergine</a> on Keybase)</li>
+<li>Fingerprint: <code>D7D7224D53A4F29E303FE01DEB505B68A5D063B0</code></li>
+<li>Keybase: /keybase/public/tsaubergine/openocean-software-signing-pub-key.asc</li>
+</ul>
+<details class="note">
+<summary>Full PGP Public Key</summary>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>-----BEGIN PGP PUBLIC KEY BLOCK-----
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>mQINBGphbaUBEADi1aafRKAmd/xVHEEYrD0MXW98vX/riP3oBjRQ9E6Jzz+EIVGA
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>qhqsJ++PvaCzkavg918yezPVnpw3/EMyheTsBRlYld5MMa3pF4kd0vEH15pzFulj
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>B9WEoLIkhAKdFxquEzsfsIJxT/ZR3A2Fl+EArJVnarU/MWEDEe5DRdDKEyvV1H6n
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>+9dq5BxpVXxPSm4m/8qppDdkcxfUtfdMDN9G+OtCHz3fbTi/vinNeh9zv8RsOsGf
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>wJT0c4pJO7m9sWKHNZJh0ut1xEfU9+LGCCQ1nU2o7jrUSSLnCOevsfh0sb4LJuHA
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>dBD0sPlloQ4Obi3fHBdHuq2AJFp6KUdpiBmz4Z823a7tu1d3+53rS55XK0/UvflH
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>RBp9/ez8J3i5/kviD01lS5fIB+SjzcWwpm0Jpps/zqx7P45Udtlz6tFpERJqZIE+
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>+oQxD54wtsa1/UFWdh1pzlEPAs10dFkg80cPTgIHvLNev6JpykDtY/An8gnBksDW
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>K2VvC4sKhpxAUO8kZpeEfNLxG70fwGuEh7kCbbPcjxjfNje269K1suoofRLzAdQb
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>+UWu5IBbB/pLopEorD44t/P5KAUEgePig8GDV4dRdJnz3Ya+gkK4zQwTMODeYHsJ
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>VgPVJy7RyF51DPwITStpMeDllgQFp9hsAsMUUVdrHAHv0CJKMDIjbOqCpQARAQAB
+<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>tDlUb2J5IFNjaG5laWRlciAoT3BlbiBPY2VhbiBTb2Z0d2FyZSkgPHRvYnlAb2Nl
+<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>YW5zb2Z0Lm9yZz6JAk4EEwEKADgWIQTq0nj2olZEwsVZ27bSii6rFNKp5QUCamFt
+<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>pQIbAQULCQgHAgYVCgkICwIEFgIDAQIeAQIXgAAKCRDSii6rFNKp5bFCEADOTORb
+<a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>ZH17LVK1Yem3UiyuBpzXKsff0dsg1AI7fAirMao6QVOCib7hh+Qh+ZOd/xJB5qTH
+<a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>7v8YBYwzrKsyO82WlrU9osU7vJbzXonbUJyI2ov3B9nbvYgaCg52FGuKBoqRRu77
+<a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a>axK+9+kLdmQJgb5lD4kMce9l0+tVOJj+LO1RPqpsKYyRa0DbmUH0cF0AP6oM467D
+<a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a>qGhddkZE7HHq+gkx2nMqqIpn3JHTjojQE8hiy4hT/pvB+HwBmnNUlTs3j+p+X9wm
+<a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a>YnkDx6NEHsYzR8UIqeqpi8RFzDNV6/ZjkEbczMGhdfdTzjT6K7LaS72AnugbVszb
+<a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a>VQ4IzuAKk2gjbcNxZ+hdmX8qvzNM5hlZDmOEZ3Yjf/PS1W8XEwairgQ9Y/ghzAJM
+<a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a>rYUF3aAsi+gvXp6uS5vIjx4TbzRvbNPYwbyIaZXQfJVU0Yera+THCvKeeinxSZA+
+<a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a>CtSHhYPi5rwN2lROBTVs91wagP1vRCiy1F3Xe9KoxlDBNBjojE67w4b5oK+BfuMx
+<a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a>7beMTS6VwRWtsl3JlEtoJ6cpT2o7qs+bzCKgVvC5ZFjRT53PSs56wlXXYn8lj/nt
+<a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a>RFT3ROYAH/4TiAfma4yKdm5gY44gPLsum3MxuV4EjTAuHPeG6rzJRk60CMo0mVoY
+<a id="__codelineno-4-27" name="__codelineno-4-27" href="#__codelineno-4-27"></a>a54nmoCZ6eTNZ+dejmWC6i6sscoQmdVr3/5cXLkCDQRqYXcFARAAuE5d3lNDS8Qf
+<a id="__codelineno-4-28" name="__codelineno-4-28" href="#__codelineno-4-28"></a>nRGLiDYLFefoC9nCPRZqp4SjGpf/IuxlAZWScHiE6LCUyF6TDKfpyYZ0MpsjVfxh
+<a id="__codelineno-4-29" name="__codelineno-4-29" href="#__codelineno-4-29"></a>kHIz1SxHCASSTAPzz3L3SB17WP7gqvpiMnjKpETvP5Z8KYPMsG/qQ6shW403VZ2t
+<a id="__codelineno-4-30" name="__codelineno-4-30" href="#__codelineno-4-30"></a>K7ntSzswNZfBwKttV8nJHGjd+1dD1U0z2PxUrVCndTdokDZjaqp8HR1P94DzveRF
+<a id="__codelineno-4-31" name="__codelineno-4-31" href="#__codelineno-4-31"></a>5HvaBbog8sSqXWH+VbZKiVIHmc7u8jq5Lpf4Utde4gk50EJDkGJzjiIupVx4Wq9m
+<a id="__codelineno-4-32" name="__codelineno-4-32" href="#__codelineno-4-32"></a>R+VWh7YFClzUByzyhWFhj2jnh8sbmt9HYpZEKGzHgItQtRvv79f086tR1uEHi/fD
+<a id="__codelineno-4-33" name="__codelineno-4-33" href="#__codelineno-4-33"></a>PX0O+PZgXdYQK5+va9MLa25pr8jFMpxwcppF2viL4kAY2Rz0diSDB0TeRKip5JeD
+<a id="__codelineno-4-34" name="__codelineno-4-34" href="#__codelineno-4-34"></a>ADmvpb1ULjssT1tc93Fd1wG9tcFVJageC6xgOxNXo8wrN57wFF8r5z78XUWgofBi
+<a id="__codelineno-4-35" name="__codelineno-4-35" href="#__codelineno-4-35"></a>7Fr0tBSq0tMWGLAXm/ZB3lAnH9aqf1BkqNQWsq/YZNmLrKsd8vXNzgrQJhrG0JUM
+<a id="__codelineno-4-36" name="__codelineno-4-36" href="#__codelineno-4-36"></a>aT184EQYt5VrXEYRwBKQBHnKxQnoiSPSwBuLLqPgtBBRbK/7c7cCAYjzhGBJ68+X
+<a id="__codelineno-4-37" name="__codelineno-4-37" href="#__codelineno-4-37"></a>8E7SyoWl+L5A6oLvuaOdnBQXLNffMYo9S7GG4wWoZ107TBlUw2N42NLt6N5KbOa4
+<a id="__codelineno-4-38" name="__codelineno-4-38" href="#__codelineno-4-38"></a>DQuGHV0AVNkdn6NQ9pW+SEIZfw9knScAEQEAAYkEcgQYAQoAJhYhBOrSePaiVkTC
+<a id="__codelineno-4-39" name="__codelineno-4-39" href="#__codelineno-4-39"></a>xVnbttKKLqsU0qnlBQJqYXcFAhsCBQkCtsaAAkAJENKKLqsU0qnlwXQgBBkBCgAd
+<a id="__codelineno-4-40" name="__codelineno-4-40" href="#__codelineno-4-40"></a>FiEE19ciTVOk8p4wP+Ad61BbaKXQY7AFAmphdwUACgkQ61BbaKXQY7DPhg/+JDas
+<a id="__codelineno-4-41" name="__codelineno-4-41" href="#__codelineno-4-41"></a>FWQUfxR5i/7s2KUL83GAF8dqmnF5rsb5QuVaBWqELyq+wR7CgycL+z0CUgzQePkb
+<a id="__codelineno-4-42" name="__codelineno-4-42" href="#__codelineno-4-42"></a>WpVoiPNOs2R3YfMPxlWiWr3Mnes8gXUUZpSC8aFjC3tE9HxshqUzPtlMh0OY2NmF
+<a id="__codelineno-4-43" name="__codelineno-4-43" href="#__codelineno-4-43"></a>ptWKSBNWheWsuMWQuSt6W8lOSQzY8xMfiNet+9RECrewFUj7nccINsXaFIElofOT
+<a id="__codelineno-4-44" name="__codelineno-4-44" href="#__codelineno-4-44"></a>ZkLZdeVfcj1QBelQyWPR6DkHJa5IM5a7h3QHbBBn7+jSGVtHTk4u6EbNM7TMe+aU
+<a id="__codelineno-4-45" name="__codelineno-4-45" href="#__codelineno-4-45"></a>oN5dC1+eIufkl5AmhtswWjkVsup7KujFbcPDTa4trJ8FuJOQmgiHBoiY/MYly01z
+<a id="__codelineno-4-46" name="__codelineno-4-46" href="#__codelineno-4-46"></a>dyozOl0GYtWc3zjnCLYnXp04iws7rHCJUzyVa14ZMo8NA77zUZewKUUKMktpaKxQ
+<a id="__codelineno-4-47" name="__codelineno-4-47" href="#__codelineno-4-47"></a>iQUkFfM5bVmAE36/FgFHxDBc902UeDB6pmjWUkJJWOFpEGPi869zQgPVxTLoU0La
+<a id="__codelineno-4-48" name="__codelineno-4-48" href="#__codelineno-4-48"></a>tvSLvHKm9BPD5bfPVYvc4jyD9wQV5O+TNOQfQvc8Li4jt96en/fBIwhdZ0elswIP
+<a id="__codelineno-4-49" name="__codelineno-4-49" href="#__codelineno-4-49"></a>+tHSwT36ZHmww2ZD393V8e187M2MmkINH1s2Y24x3/YAogw3HWt7Ak0/OSH2Tz3M
+<a id="__codelineno-4-50" name="__codelineno-4-50" href="#__codelineno-4-50"></a>Vz0CheE4ooZRQJSyhjLehVE6WNcBwusA4PuZbB8cnlnNlEHr4VY8pW/pYSljij2V
+<a id="__codelineno-4-51" name="__codelineno-4-51" href="#__codelineno-4-51"></a>faLaD75/zRt7YvrXZF+6hEM1ehgAUXj7faKeefPB5xAAzWoqQTpcrYKCsf52bG2U
+<a id="__codelineno-4-52" name="__codelineno-4-52" href="#__codelineno-4-52"></a>fgIfglbH0Ta6VqRWBc71+6XKGEIuxPc4AIFh/CiBpyznzMkQflmxOoerOZTxzBYQ
+<a id="__codelineno-4-53" name="__codelineno-4-53" href="#__codelineno-4-53"></a>QeSkcF5X6NtSCHmvTYrkV3xPGlbBSWN2afs0BUXML8056KuDVTGOZjaEzSdVW1OY
+<a id="__codelineno-4-54" name="__codelineno-4-54" href="#__codelineno-4-54"></a>uFm8QRWEm9VHi8Uw8Cuh3R7YyVIBIiti9D1NEVdi0iStMZiI2DVgPOyoWDSiyWkX
+<a id="__codelineno-4-55" name="__codelineno-4-55" href="#__codelineno-4-55"></a>PUZfJ0Jdb3O/MyiJiHyz/U2HdVQa+YgH/H5yUTwIIsi6qGNXgiiOvmUKd+kt0mRJ
+<a id="__codelineno-4-56" name="__codelineno-4-56" href="#__codelineno-4-56"></a>gW3rKjYpyJCTZRPAS3OkVxywYRzvjSoBPwVeWsxb6nC+VWKkLvTELO9AjPGPBEDL
+<a id="__codelineno-4-57" name="__codelineno-4-57" href="#__codelineno-4-57"></a>84MJpOa0Ga83WDgTYaWskWORdhA9HmHEP9AC1yRLD8y9pfAOUZuozEUN0HL5WKaQ
+<a id="__codelineno-4-58" name="__codelineno-4-58" href="#__codelineno-4-58"></a>xOSZ2i7dIRpLWyzcuhzmZjLBpbGsXFXbp5Xqu8n6UB1worzIB3eqLgtV2uYxranm
+<a id="__codelineno-4-59" name="__codelineno-4-59" href="#__codelineno-4-59"></a>43U/fH/WnstBVMg97OVPuJKepw3oV+oSl/wumv9eZIYgtUXj9AaXnmkP/AnuEa37
+<a id="__codelineno-4-60" name="__codelineno-4-60" href="#__codelineno-4-60"></a>MHQOLTnIEE10WLooExu3DwFrwCGFoZsBDfQ6snlcigduHdHgfeObs7rDGIKzg4Qv
+<a id="__codelineno-4-61" name="__codelineno-4-61" href="#__codelineno-4-61"></a>twSoj87G/f+tRKQXWanxQUnpYtgY9Ol96JQjIUWuVMqDEGKiKUAKyxdKR8c9KF9l
+<a id="__codelineno-4-62" name="__codelineno-4-62" href="#__codelineno-4-62"></a>KMdONYUBMCU2j4li8KdgnQ0=
+<a id="__codelineno-4-63" name="__codelineno-4-63" href="#__codelineno-4-63"></a>=E/xS
+<a id="__codelineno-4-64" name="__codelineno-4-64" href="#__codelineno-4-64"></a>-----END PGP PUBLIC KEY BLOCK-----
+</code></pre></div>
+</details>
+<h2 id="roadmap">Roadmap</h2>
+<p>The plan is public in <a href="https://github.com/openocean-software/openocean-plan">openocean-plan</a>. The technical goals come from 114 interviews with people in academia, industry and government, described in the <a href="https://github.com/openocean-software/openocean-plan/blob/main/papers/OpenOcean_IEEE_AUV_2026_Paper-FINAL.pdf">AUV26 paper</a>. Comment on any of them on the <a href="https://forum.oceansoft.org">forum</a>.</p>
+<table>
+<thead>
+<tr>
+<th>Goal</th>
+<th>Status</th>
+<th>What it gives member projects</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/openocean-software/openocean-plan/blob/main/technical/middleware-interoperability.md">Middleware interoperability</a></td>
+<td><span class="oo-status oo-status--demo">In progress</span></td>
+<td>Common message set and maintained bridges</td>
+</tr>
+<tr>
+<td><a href="https://github.com/openocean-software/openocean-plan/blob/main/technical/devops-technical-support.md">Linux packages</a></td>
+<td><span class="oo-status oo-status--demo">In progress</span></td>
+<td>Shared, signed apt repository</td>
+</tr>
+<tr>
+<td><a href="https://github.com/openocean-software/openocean-plan/blob/main/technical/devops-technical-support.md">Continuous integration</a></td>
+<td><span class="oo-status oo-status--adhoc">Planned</span></td>
+<td>Shared CI templates and maturity badges</td>
+</tr>
+<tr>
+<td><a href="https://github.com/openocean-software/openocean-plan/blob/main/technical/devops-technical-support.md">Embedded builds</a></td>
+<td><span class="oo-status oo-status--adhoc">Planned</span></td>
+<td>Raspberry Pi and ARM builds in CI</td>
+</tr>
+<tr>
+<td><a href="https://github.com/openocean-software/openocean-plan/blob/main/technical/devops-technical-support.md">Docker images</a></td>
+<td><span class="oo-status oo-status--adhoc">Planned</span></td>
+<td>Dockerfile templates and multi-arch images</td>
+</tr>
+<tr>
+<td><a href="https://github.com/openocean-software/openocean-plan/blob/main/technical/fair-data-qa-qc.md">Data QA/QC and FAIR data</a></td>
+<td><span class="oo-status oo-status--adhoc">Planned</span></td>
+<td>QC checklists, metadata templates, provenance</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+  
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+  <footer class="oo-footer">
+    <div class="oo-footer__inner md-grid">
+      <div class="oo-footer__about">
+        <div class="oo-footer__name">Open Ocean Software</div>
+        <p>Funded by the U.S. National Science Foundation under the Pathways to Enable Open-Source Ecosystems (POSE) program.</p>
+      </div>
+      <nav class="oo-footer__links" aria-label="Footer: hub">
+        <a href="../projects/">Member projects</a>
+        <a href="./">Toolkit</a>
+        <a href="../join/">Join</a>
+      </nav>
+      <nav class="oo-footer__links" aria-label="Footer: community">
+        <a href="https://forum.oceansoft.org">Forum</a>
+        <a href="https://github.com/openocean-software/">GitHub</a>
+        <a href="https://buttondown.com/openoceansoftware">Newsletter</a>
+        <a href="mailto:info@oceansoft.org">info@oceansoft.org</a>
+      </nav>
+    </div>
+  </footer>
+
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["announce.dismiss", "navigation.tabs", "content.tabs.link", "content.code.copy"], "search": "../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.a5f9d56c.min.js"></script>
+      
+        <script src="../javascripts/directory.js"></script>
+      
+    
+  </body>
+</html>
