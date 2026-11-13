@@ -37,7 +37,7 @@
     <div class="oo-stats">
       <div><span class="oo-stats__value">{{ config.extra.stats.members | e }}</span><span>member projects</span></div>
       <div><span class="oo-stats__value">114</span><span>community interviews behind the plan</span></div>
-      <div><span class="oo-stats__value">2</span><span>projects you can apt install today: MOOS-IvP and DCCL</span></div>
+      <div><span class="oo-stats__value">{{ config.extra.stats.packaged | length | e }}</span><span>member projects you can apt install today</span></div>
       <div><span class="oo-stats__value">{{ config.extra.stats.events_this_year | e }}</span><span>community events in {{ config.extra.stats.year | e }}</span></div>
     </div>
   </section>
@@ -74,7 +74,7 @@
         <li><h3>Trust</h3><p>Packages are built in a public pipeline and GPG-signed. Member repos on GitHub show their OpenSSF Scorecard.</p></li>
         <li><h3>Discoverability</h3><p>One directory and one forum, so you can find the project and the person who maintains it.</p></li>
         <li><h3>Interoperability</h3><p>We're working toward maintained bridges between ROS 2, MOOS-IvP, Goby and LCM. Today only Goby ↔ MOOS is production grade.</p></li>
-        <li><h3>Accessibility</h3><p>Binary packages, so you can <code>apt install</code> instead of building from source. MOOS-IvP and DCCL are ready now, and more projects follow as they're packaged.</p></li>
+        <li><h3>Accessibility</h3><p>Binary packages, so you can <code>apt install</code> instead of building from source. {{ config.extra.stats.packaged | join(", ") | e }} are ready now, and more projects follow as they're packaged.</p></li>
       </ol>
     </div>
   </section>
@@ -143,7 +143,7 @@
     <div class="md-grid oo-section oo-split">
       <div class="oo-split__text">
         <h2 id="oo-crew-title">Team</h2>
-        <p>We maintain MOOS-IvP, Goby, DCCL, ros_acomms and WHOI-ROS, and between us have decades of field time on AUVs.</p>
+        <p>We maintain MOOS-IvP, Goby, DCCL, NETSIM, ros_acomms and WHOI-ROS, and between us have decades of field time on AUVs.</p>
         <a class="oo-more" href="{{ 'team/' | url }}">Meet the team →</a>
       </div>
       <ul class="oo-crew__list">
