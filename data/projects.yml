@@ -22,7 +22,9 @@
 # affiliation, tags, links, issues (tracker URL), scorecard (github.com/org/repo
 # for the OpenSSF badge), apt_packages (marks the project as apt-packaged:
 # chip, install button, signing key in the trust panel), apt_url (same, for a
-# project with no #install section yet: the button links here instead).
+# project with no #install section yet: the button links here instead),
+# apt_channel (continuous for a project with no tagged releases packaged yet:
+# the trust panel shows the continuous key, and the home page doesn't count it).
 
 - slug: moos-ivp
   name: MOOS-IvP
@@ -92,6 +94,7 @@
   affiliation: GobySoft
   tags: [C++, Acoustic comms]
   scorecard: github.com/GobySoft/goby3
+  apt_packages: [goby3-apps, libgoby3-dev]
   links:
     - {label: Website, url: "https://goby.software"}
     - {label: GitHub, url: "https://github.com/GobySoft/goby3"}
@@ -110,7 +113,7 @@
   affiliation: GobySoft
   tags: [C++, Acoustic comms]
   scorecard: github.com/GobySoft/dccl
-  apt_url: "https://apt.oceansoft.org"
+  apt_packages: [dccl5-apps, libdccl5-dev, python3-dccl5]
   links:
     - {label: Website, url: "https://libdccl.org/4.0/"}
     - {label: GitHub, url: "https://github.com/GobySoft/dccl"}
@@ -122,10 +125,11 @@
   category: Packaging
   filter: oos
   summary: >-
-    Builds and signs apt packages for member projects. MOOS-IvP and DCCL
-    are ready on Debian and Ubuntu today.
+    Builds and signs apt packages for member projects on Debian and Ubuntu,
+    in release, beta and continuous channels.
   maintainer: Open Ocean Software
   tags: [Debian, Ubuntu]
   page: toolkit/
   links:
+    - {label: Documentation, url: "https://build.oceansoft.org"}
     - {label: GitHub, url: "https://github.com/openocean-software/openocean-build"}

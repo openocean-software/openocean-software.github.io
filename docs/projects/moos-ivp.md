@@ -9,7 +9,7 @@ hide:
 
 ## Install { #install }
 
-Signed binary packages for Debian stable/oldstable and Ubuntu active LTS releases, built by the Open Ocean pipeline from tagged MOOS-IvP releases. Packaging lives in [openocean-build](https://github.com/openocean-software/openocean-build/tree/main/projects/moos-ivp/debian).
+Signed binary packages for Debian and Ubuntu, built by the Open Ocean pipeline from tagged MOOS-IvP releases. Packaging lives in [openocean-build](https://github.com/openocean-software/openocean-build/tree/main/projects/moos-ivp/debian).
 
 1. Add the Open Ocean apt repository and signing key: follow the [apt setup steps](../toolkit.md#apt-packages) on the Toolkit page.
 2. Install the helm, apps, and GUI tools:
@@ -31,6 +31,8 @@ Descriptions from `moos-ivp/debian/control` in openocean-build.
 | `moos-ivp-missions` | Example missions |
 | `libmoos-ivp`, `libmoos-ivp-dev` | Libraries and developer headers |
 | `libmoos10-mit`, `moos10-mit-*` | Core MOOS: libraries, core tools, database, essentials, UI |
+
+The IvP Helm libraries built without MOOS (`libivp-helm0`, `libivp-helm-dev`) are in the [continuous channel](../toolkit.md#channels), as snapshots until a MOOS-IvP release includes that build option. They install beside `libmoos-ivp`.
 
 ## Connects with
 

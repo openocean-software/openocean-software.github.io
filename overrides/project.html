@@ -72,7 +72,7 @@
           {% if p.language %}<dt>Language</dt><dd>{{ p.language | e }}</dd>{% endif %}
           {% if p.middleware %}<dt>Middleware</dt><dd>{{ p.middleware | e }}</dd>{% endif %}
           {% if p.license %}<dt>License</dt><dd>{{ p.license | e }}</dd>{% endif %}
-          {% if p.apt_packages or p.apt_url %}<dt>Packages</dt><dd>Debian, Ubuntu</dd>{% endif %}
+          {% if p.apt_packages or p.apt_url %}<dt>Packages</dt><dd>Debian, Ubuntu{% if p.apt_channel == "continuous" %} (continuous builds){% endif %}</dd>{% endif %}
           {% if p.latest_release %}<dt>Latest release</dt><dd>{{ p.latest_release | e }}</dd>{% endif %}
           {% if p.issues %}<dt>Issues</dt><dd><a href="{{ p.issues | e }}">Tracker</a></dd>{% endif %}
         </dl>
@@ -81,9 +81,10 @@
         <div class="oo-panel">
           <h2>Signing and security</h2>
           {% if p.apt_packages or p.apt_url %}
-            <div class="oo-meta">Package signing key</div>
+            {% set channel = p.apt_channel or "release" %}
+            <div class="oo-meta">Package signing key ({{ channel | e }} channel)</div>
             {# From extra.signing_key in mkdocs.yml, printed in groups of four like gpg does. #}
-            {% set fp = config.extra.signing_key.fingerprint %}
+            {% set fp = config.extra.signing_key[channel] %}
             <code class="oo-fingerprint">{% for i in range(0, fp | length, 4) %}{{ fp[i:i + 4] | e }}{% if not loop.last %} {% endif %}{% endfor %}</code>
             <a href="{{ 'toolkit/' | url }}#gpg-signing-public-key">Verify the key</a>
           {% endif %}

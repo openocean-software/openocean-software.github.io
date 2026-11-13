@@ -6,81 +6,128 @@ hide:
 
 # Toolkit
 
-The build pipeline, the signed apt repository and the public plan. All of it is open source under the [openocean-software](https://github.com/openocean-software) GitHub organization.
+The build pipeline, the signed apt repositories and the public plan. All of it is open source under the [openocean-software](https://github.com/openocean-software) GitHub organization.
 
 ## Packages
 
-Member projects keep a working build (CMake, `pyproject.toml`, etc.) and a tagged release schedule. The [openocean-build](https://github.com/openocean-software/openocean-build) pipeline builds, signs, and publishes the packages to `apt.oceansoft.org`.
+Member projects keep a working build (CMake, `pyproject.toml`, etc.) and a tagged release schedule. The [openocean-build](https://github.com/openocean-software/openocean-build) pipeline builds, signs, and publishes the packages to `apt.oceansoft.org`. Its documentation is at [build.oceansoft.org](https://build.oceansoft.org), including a [getting started guide for member projects](https://build.oceansoft.org/getting-started/).
 
 <div class="oo-pipeline" markdown>
 <div class="oo-pipeline__step" markdown>
 **Member project**
 
-<span class="oo-meta">git, a working build, tagged releases</span>
+<span class="oo-meta">git, a working build, signed release tags</span>
 </div>
 <div class="oo-pipeline__arrow" aria-hidden="true">→</div>
 <div class="oo-pipeline__step oo-pipeline__step--source" markdown>
 **Open Ocean pipeline**
 
-<span class="oo-meta">sbuild in Docker, Debian packaging, GPG signing</span>
+<span class="oo-meta">sbuild in Docker, install test, GPG signing</span>
 </div>
 <div class="oo-pipeline__arrow" aria-hidden="true">→</div>
 <div class="oo-pipeline__step oo-pipeline__step--ink" markdown>
 **apt.oceansoft.org**
 
-<span class="oo-meta">Debian stable, oldstable, Ubuntu LTS</span>
+<span class="oo-meta">Debian stable, oldstable, Ubuntu LTS · amd64, arm64</span>
 </div>
 </div>
 
 | Tier | Targets | Status |
 |---|---|---|
-| Tier 1 | Debian and Ubuntu (`.deb`) | <span class="oo-status oo-status--demo">In progress</span> MOOS-IvP and DCCL ready to install |
+| Tier 1 | Debian and Ubuntu (`.deb`) | <span class="oo-status oo-status--demo">In progress</span> MOOS-IvP, Goby3 and DCCL ready to install |
 | Tier 2 | OpenEmbedded (Yocto), Homebrew | <span class="oo-status oo-status--adhoc">Planned</span> |
+
+### Channels { #channels }
+
+Packages are published to three [channels](https://build.oceansoft.org/channels/), each its own set of apt repositories:
+
+| Channel | Contents | Signed with | Projects |
+|---|---|---|---|
+| Release | Tagged releases, published after a reviewer approves | [Release key](#gpg-signing-public-key) | [MOOS-IvP](projects/moos-ivp.md), [Goby3](projects/goby3.md), [DCCL](projects/dccl.md), NETSIM |
+| Beta | Tagged prereleases | [Release key](#gpg-signing-public-key) | openocean-messages |
+| Continuous | The latest trusted commit on each project's main branch | [Continuous key](#continuous-key) | Goby3, DCCL, NETSIM, IvPico, the IvP Helm libraries without MOOS, openocean-messages |
+
+The release channel also carries the dependencies these projects need that Debian and Ubuntu don't package (MAVLink, libais, Wt).
 
 ### Install from apt.oceansoft.org { #apt-packages }
 
 !!! warning "Trust"
 
-    These instructions assume oceansoft.org hasn't been compromised (and thus lists the correct GPG fingerprint: `OOS_KEY`). This is normally a safe assumption, but if your security requirements call for it, consider independently verifying [our signing key](#gpg-signing-public-key), e.g. using Keybase or other out-of-band techniques.
+    These instructions assume oceansoft.org and the openocean-build repository haven't been compromised (and thus list the correct GPG fingerprints). This is normally a safe assumption, but if your security requirements call for it, consider independently verifying [our signing key](#gpg-signing-public-key), e.g. using Keybase or other out-of-band techniques.
 
-For Debian stable/oldstable and Ubuntu active LTS releases:
+For Debian bookworm and trixie, and Ubuntu jammy, noble and resolute, on amd64 and arm64. A few projects skip a release whose dependencies are too old.
 
-- Get the signing key ([details](#gpg-signing-public-key)):
-  ```
-  OOS_KEY=D7D7224D53A4F29E303FE01DEB505B68A5D063B0
-  OOS_KEYRING=/etc/apt/keyrings/oceansoft.gpg
-  gpg --keyserver keyserver.ubuntu.com --recv-keys $OOS_KEY && gpg --export $OOS_KEY | sudo tee $OOS_KEYRING > /dev/null
-  ```
-- Add `apt` sources:
-  ```
-  DISTRO=$(. /etc/os-release; echo "$ID")             # "ubuntu" or "debian"
-  DIST=$(. /etc/os-release; echo "$VERSION_CODENAME") # e.g., "resolute"
-  REPO=http://apt.oceansoft.org/$DISTRO-$DIST/
-  echo "deb [signed-by=$OOS_KEYRING] $REPO $DIST main" | sudo tee /etc/apt/sources.list.d/oceansoft.list
-  sudo apt update
-  ```
+=== "Setup script"
+
+    [`apt-setup`](https://github.com/openocean-software/openocean-build/blob/main/scripts/apt-setup) adds the release channel, checking the key's fingerprint before apt is told to trust it:
+
+    ```bash
+    curl -fsSLO https://raw.githubusercontent.com/openocean-software/openocean-build/main/scripts/apt-setup
+    ```
+
+    ```bash
+    sudo bash apt-setup
+    ```
+
+    Options add more: `--beta` and `--continuous` for those channels, and `--zenoh` for Eclipse Zenoh's repository, which `goby3-zenoh` needs.
+
+=== "By hand"
+
+    - Get the release key and check its fingerprint ([details](#gpg-signing-public-key)):
+      ```bash
+      OOS_KEY=D7D7224D53A4F29E303FE01DEB505B68A5D063B0
+      OOS_KEYRING=/usr/share/keyrings/openocean-release.asc
+      curl -fsSLO https://raw.githubusercontent.com/openocean-software/openocean-build/main/keys/release.asc
+      gpg --show-keys --with-colons release.asc | grep -x "fpr:::::::::$OOS_KEY:" && sudo install -m 0644 release.asc $OOS_KEYRING
+      ```
+    - Add `apt` sources:
+      ```bash
+      DISTRO=$(. /etc/os-release; echo "$ID")             # "ubuntu" or "debian"
+      DIST=$(. /etc/os-release; echo "$VERSION_CODENAME") # e.g., "resolute"
+      printf 'Types: deb\nURIs: https://apt.oceansoft.org/release/%s-%s\nSuites: %s\nComponents: main\nSigned-By: %s\n' \
+        $DISTRO $DIST $DIST $OOS_KEYRING | sudo tee /etc/apt/sources.list.d/openocean-release.sources
+      sudo apt update
+      ```
+
+    The beta channel is the same with `beta` in place of `release` in the URL. The continuous channel also needs its [own key](#continuous-key). See [Installing packages](https://build.oceansoft.org/installing/).
+
+Then:
+
 - Install packages:
-  ```
-  apt install ...
+  ```bash
+  sudo apt install ...
   ```
 
 - Full list of packages available:
-  ```
-  apt install lz4
-  lz4cat /var/lib/apt/lists/apt.oceansoft.org*_Packages.lz4
+  ```bash
+  sudo apt install lz4
+  lz4cat /var/lib/apt/lists/apt.oceansoft.org*_Packages.lz4 | grep '^Package:'
   ```
 
-### Signing key { #gpg-signing-public-key }
+!!! note "Set up before November 2026?"
+
+    The repositories moved from `apt.oceansoft.org/<distro>-<dist>/` to `apt.oceansoft.org/release/<distro>-<dist>`. Remove `/etc/apt/sources.list.d/oceansoft.list` and `/etc/apt/keyrings/oceansoft.gpg`, then follow the steps above.
+
+### Signing keys { #gpg-signing-public-key }
 
 <a href="https://xkcd.com/1553/"><img title="I guess I should be signing stuff, but I've never been sure what to sign. Maybe if I post my private key, I can crowdsource my decisions about what to sign." src="https://imgs.xkcd.com/comics/public_key.png"/></a>
 
-Currently used to sign Debian/Ubuntu packages posted to http://apt.oceansoft.org.
+The release key signs the release and beta channels at https://apt.oceansoft.org. The repositories are signed by a subkey; the primary key stays offline, so the subkey can be replaced without changing the key you trust. More on each key is in [Keys](https://build.oceansoft.org/keys/).
 
 - User: Toby Schneider ([tsaubergine](https://keybase.io/tsaubergine) on Keybase)
-- Fingerprint: `D7D7224D53A4F29E303FE01DEB505B68A5D063B0`
+- Primary key fingerprint: `EAD278F6A25644C2C559DBB6D28A2EAB14D2A9E5`
+- Signing subkey fingerprint: `D7D7224D53A4F29E303FE01DEB505B68A5D063B0`
+- In openocean-build: [`keys/release.asc`](https://github.com/openocean-software/openocean-build/blob/main/keys/release.asc)
 - Keybase: /keybase/public/tsaubergine/openocean-software-signing-pub-key.asc
 
-??? note "Full PGP Public Key"
+#### Continuous key { #continuous-key }
+
+Continuous builds are published without a reviewer, so they are signed with a separate key: nothing built from an unreviewed commit can be signed as a release.
+
+- Fingerprint: `DAF08DD7788E6C84C6F8E8D3E59E1A81FECDB228`
+- In openocean-build: [`keys/continuous.asc`](https://github.com/openocean-software/openocean-build/blob/main/keys/continuous.asc)
+
+??? note "Full PGP public key (release)"
 
      ```
      -----BEGIN PGP PUBLIC KEY BLOCK-----
@@ -156,7 +203,7 @@ The plan is public in [openocean-plan](https://github.com/openocean-software/ope
 | Goal | Status | What it gives member projects |
 |---|---|---|
 | [Middleware interoperability](https://github.com/openocean-software/openocean-plan/blob/main/technical/middleware-interoperability.md) | <span class="oo-status oo-status--demo">In progress</span> | Common message set and maintained bridges |
-| [Linux packages](https://github.com/openocean-software/openocean-plan/blob/main/technical/devops-technical-support.md) | <span class="oo-status oo-status--demo">In progress</span> | Shared, signed apt repository |
+| [Linux packages](https://github.com/openocean-software/openocean-plan/blob/main/technical/devops-technical-support.md) | <span class="oo-status oo-status--demo">In progress</span> | Shared, signed apt repositories: release, beta and continuous |
 | [Continuous integration](https://github.com/openocean-software/openocean-plan/blob/main/technical/devops-technical-support.md) | <span class="oo-status oo-status--adhoc">Planned</span> | Shared CI templates and maturity badges |
 | [Embedded builds](https://github.com/openocean-software/openocean-plan/blob/main/technical/devops-technical-support.md) | <span class="oo-status oo-status--adhoc">Planned</span> | Raspberry Pi and ARM builds in CI |
 | [Docker images](https://github.com/openocean-software/openocean-plan/blob/main/technical/devops-technical-support.md) | <span class="oo-status oo-status--adhoc">Planned</span> | Dockerfile templates and multi-arch images |

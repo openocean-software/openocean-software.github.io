@@ -15,6 +15,7 @@ The site is [MkDocs](https://www.mkdocs.org/) with the [Material](https://squidf
 | Add a member project | a `data/projects.yml` entry, a `docs/projects/<slug>.md` with `template: project.html` and `project: <slug>`, and a line under `Projects` in `mkdocs.yml` |
 | Events on the home page | `data/events.yml` (past/upcoming is worked out from the build date) |
 | Team page and home page crew list | `data/team.yml` |
+| The apt signing key fingerprints | `extra.signing_key` in `mkdocs.yml` and `docs/toolkit.md` together (the build fails if they differ) |
 | Colors, type, layout | `docs/stylesheets/extra.css` |
 
 Fields not yet agreed (stage, badge, license, latest release, standards evidence) can be left out; the templates hide them.

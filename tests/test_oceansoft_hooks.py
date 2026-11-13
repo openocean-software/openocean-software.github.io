@@ -161,6 +161,17 @@ def test_projects_reject_duplicate_slug(tmp_path):
         hooks.load_projects(_write(tmp_path, entry * 2))
 
 
+def test_packaged_count_skips_continuous_only_and_initiatives():
+    # the home page says "apt install today", which a snapshot-only project isn't
+    projects = [
+        {"name": "DCCL", "kind": "member", "apt_packages": ["dccl5-apps"]},
+        {"name": "IvPico", "kind": "member", "apt_packages": ["ivpico"], "apt_channel": "continuous"},
+        {"name": "WHOI-ROS", "kind": "member"},
+        {"name": "openocean-messages", "kind": "initiative", "apt_packages": ["libopenocean-messages1"]},
+    ]
+    assert hooks.released_package_names(projects) == ["DCCL"]
+
+
 _PROJECTS = [{"slug": "dccl"}, {"slug": "goby3"}]
 
 

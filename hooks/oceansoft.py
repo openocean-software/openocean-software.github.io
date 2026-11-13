@@ -41,6 +41,7 @@ _FILTERS = {
     "oos": "Built by Open Ocean",
 }
 # Stages and badges from openocean-plan/member-projects/guidelines.
+_APT_CHANNELS = ("release", "continuous")
 _STAGES = ("pond", "explorer", "estuary", "bay", "ocean")
 _BADGES = ("research", "community", "project", "product", "ecosystem")
 _EVENT_REQUIRED = ("name", "date", "venue")
@@ -74,6 +75,7 @@ def on_config(config: Any, **kwargs: Any) -> Any:
     config.extra["forum_topics"] = _get_forum_topics()
     config.extra["stats"] = {
         "members": sum(1 for p in projects if p["kind"] == "member"),
+        "packaged": released_package_names(projects),
         "events_this_year": sum(1 for e in events if e["date"].year == today.year),
         "year": today.year,
     }
@@ -81,14 +83,15 @@ def on_config(config: Any, **kwargs: Any) -> Any:
 
 
 def on_page_markdown(markdown: str, page: Any, config: Any, **kwargs: Any) -> str:
-    """Fail the build if toolkit.md and mkdocs.yml disagree on the signing key.
+    """Fail the build if toolkit.md and mkdocs.yml disagree on the signing keys.
 
-    The fingerprint is written out in prose on the Toolkit page and read from
+    The fingerprints are written out in prose on the Toolkit page and read from
     ``extra.signing_key`` by the project page trust panel; a key rotation that
     updates only one of them would show users a stale fingerprint.
     """
     if page.file.src_path == "toolkit.md":
-        check_fingerprint_in_page(markdown, config.extra["signing_key"]["fingerprint"], page_path=page.file.src_path)
+        for fingerprint in config.extra["signing_key"].values():
+            check_fingerprint_in_page(markdown, fingerprint, page_path=page.file.src_path)
     return markdown
 
 
@@ -157,8 +160,20 @@ def load_projects(path: Path) -> list[dict[str, Any]]:
         _check_choice(path, slug, "filter", p.get("filter"), tuple(_FILTERS))
         _check_choice(path, slug, "stage", p.get("stage"), _STAGES)
         _check_choice(path, slug, "badge", p.get("badge"), _BADGES)
+        _check_choice(path, slug, "apt_channel", p.get("apt_channel"), _APT_CHANNELS)
         p.setdefault("page", f"projects/{slug}/")
     return projects
+
+
+def released_package_names(projects: list[dict[str, Any]]) -> list[str]:
+    """Names of the member projects with packages in the release channel."""
+    return [
+        p["name"]
+        for p in projects
+        if p["kind"] == "member"
+        and (p.get("apt_packages") or p.get("apt_url"))
+        and p.get("apt_channel", "release") == "release"
+    ]
 
 
 def load_records(path: Path, *, required: tuple[str, ...]) -> list[dict[str, Any]]:

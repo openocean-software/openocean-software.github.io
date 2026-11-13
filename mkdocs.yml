@@ -74,10 +74,13 @@ extra:
   - icon: fontawesome/brands/github
     link: https://github.com/openocean-software/
   generator: false
-  # Shown in the project page trust panel. hooks/oceansoft.py fails the build
-  # if toolkit.md doesn't carry the same fingerprint, so rotate both at once.
+  # Shown in the project page trust panel, per apt channel (release also signs
+  # beta). hooks/oceansoft.py fails the build if toolkit.md doesn't carry the
+  # same fingerprints, so rotate both at once. They come from openocean-build's
+  # defaults.yaml (channels.*.signing_key).
   signing_key:
-    fingerprint: D7D7224D53A4F29E303FE01DEB505B68A5D063B0
+    release: D7D7224D53A4F29E303FE01DEB505B68A5D063B0
+    continuous: DAF08DD7788E6C84C6F8E8D3E59E1A81FECDB228
 
 extra_css:
   - stylesheets/extra.css
