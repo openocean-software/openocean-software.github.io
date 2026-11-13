@@ -32,7 +32,7 @@ Descriptions from `moos-ivp/debian/control` in openocean-build.
 | `libmoos-ivp`, `libmoos-ivp-dev` | Libraries and developer headers |
 | `libmoos10-mit`, `moos10-mit-*` | Core MOOS: libraries, core tools, database, essentials, UI |
 
-The IvP Helm libraries built without MOOS (`libivp-helm0`, `libivp-helm-dev`) are in the [continuous channel](../toolkit.md#channels), as snapshots until a MOOS-IvP release includes that build option. They install beside `libmoos-ivp`, and [IvPico](ivpico.md) uses them.
+The IvP Helm libraries built without MOOS (`libivp-helm0`, `libivp-helm-dev`) are in the [continuous channel](../toolkit.md#channels), as snapshots until a MOOS-IvP release includes that build option. They install beside `libmoos-ivp`.
 
 ## Connects with
 

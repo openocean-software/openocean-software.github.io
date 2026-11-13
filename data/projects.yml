@@ -3,7 +3,7 @@
 #
 # Required per entry: slug, name, kind, category, filter, summary
 #   kind:   member | initiative
-#   filter: autonomy | middleware | ros | encoding | simulation | oos  (directory filter chips)
+#   filter: autonomy | middleware | ros | encoding | oos  (directory filter chips)
 #
 # Leave a field out (or null) until the team has agreed on it; the templates
 # hide anything that is not set rather than printing a placeholder. stage and
@@ -118,44 +118,6 @@
     - {label: Website, url: "https://libdccl.org/4.0/"}
     - {label: GitHub, url: "https://github.com/GobySoft/dccl"}
   issues: "https://github.com/GobySoft/dccl/issues"
-
-- slug: netsim
-  name: NETSIM
-  kind: member
-  category: Simulation
-  filter: simulation
-  summary: >-
-    Underwater acoustic network simulator. Carries the audio of simulated
-    acoustic modems through a propagation model, so modem software can be
-    tested together without water.
-  language: C++
-  middleware: Goby
-  maintainer: Toby Schneider
-  affiliation: GobySoft
-  tags: [C++, Acoustic comms, Simulation]
-  apt_packages: [netsim-apps, libnetsim-dev]
-  links:
-    - {label: GitHub, url: "https://github.com/GobySoft/netsim"}
-  issues: "https://github.com/GobySoft/netsim/issues"
-
-- slug: ivpico
-  name: IvPico
-  kind: member
-  category: Autonomy
-  filter: autonomy
-  summary: >-
-    The IvP Helm and the maritime behaviors from MOOS-IvP as first-class
-    applications in other middlewares, rather than through a bridge to MOOS.
-  language: C++
-  middleware: Goby
-  maintainer: Toby Schneider
-  affiliation: GobySoft
-  tags: [C++, Goby]
-  apt_packages: [ivpico]
-  apt_channel: continuous
-  links:
-    - {label: GitHub, url: "https://github.com/GobySoft/ivpico"}
-  issues: "https://github.com/GobySoft/ivpico/issues"
 
 - slug: openocean-build
   name: openocean-build

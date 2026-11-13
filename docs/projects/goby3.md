@@ -43,5 +43,4 @@ The [continuous channel](../toolkit.md#channels) carries builds of the latest co
 | Stack | Bridge | Notes |
 |---|---|---|
 | [MOOS-IvP](moos-ivp.md) | <span class="oo-status oo-status--mature">Mature</span> | Built into Goby3. Translates between Goby pub/sub and MOOSDB variables. |
-| [IvPico](ivpico.md) | <span class="oo-status oo-status--demo">Demo</span> | Runs the IvP Helm as a Goby3 application, without MOOS. |
 | ROS 2 | <span class="oo-status oo-status--demo">Demo</span> | `goby_ros_gateway` bridges the Goby3 interprocess layer to ROS 2 topics. Not yet used outside the original demo code. |

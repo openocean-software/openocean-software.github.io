@@ -38,7 +38,6 @@ _FILTERS = {
     "middleware": "Middleware and comms",
     "ros": "ROS 2",
     "encoding": "Encoding",
-    "simulation": "Simulation",
     "oos": "Built by Open Ocean",
 }
 # Stages and badges from openocean-plan/member-projects/guidelines.

@@ -34,7 +34,7 @@ Member projects keep a working build (CMake, `pyproject.toml`, etc.) and a tagge
 
 | Tier | Targets | Status |
 |---|---|---|
-| Tier 1 | Debian and Ubuntu (`.deb`) | <span class="oo-status oo-status--demo">In progress</span> MOOS-IvP, Goby3, DCCL and NETSIM ready to install |
+| Tier 1 | Debian and Ubuntu (`.deb`) | <span class="oo-status oo-status--demo">In progress</span> MOOS-IvP, Goby3 and DCCL ready to install |
 | Tier 2 | OpenEmbedded (Yocto), Homebrew | <span class="oo-status oo-status--adhoc">Planned</span> |
 
 ### Channels { #channels }
@@ -43,9 +43,9 @@ Packages are published to three [channels](https://build.oceansoft.org/channels/
 
 | Channel | Contents | Signed with | Projects |
 |---|---|---|---|
-| Release | Tagged releases, published after a reviewer approves | [Release key](#gpg-signing-public-key) | [MOOS-IvP](projects/moos-ivp.md), [Goby3](projects/goby3.md), [DCCL](projects/dccl.md), [NETSIM](projects/netsim.md) |
+| Release | Tagged releases, published after a reviewer approves | [Release key](#gpg-signing-public-key) | [MOOS-IvP](projects/moos-ivp.md), [Goby3](projects/goby3.md), [DCCL](projects/dccl.md), NETSIM |
 | Beta | Tagged prereleases | [Release key](#gpg-signing-public-key) | openocean-messages |
-| Continuous | The latest trusted commit on each project's main branch | [Continuous key](#continuous-key) | Goby3, DCCL, NETSIM, [IvPico](projects/ivpico.md), the IvP Helm libraries without MOOS, openocean-messages |
+| Continuous | The latest trusted commit on each project's main branch | [Continuous key](#continuous-key) | Goby3, DCCL, NETSIM, IvPico, the IvP Helm libraries without MOOS, openocean-messages |
 
 The release channel also carries the dependencies these projects need that Debian and Ubuntu don't package (MAVLink, libais, Wt).
 

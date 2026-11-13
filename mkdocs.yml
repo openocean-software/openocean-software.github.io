@@ -40,8 +40,6 @@ nav:
         - ros_acomms: projects/ros-acomms.md
         - Goby3: projects/goby3.md
         - DCCL: projects/dccl.md
-        - NETSIM: projects/netsim.md
-        - IvPico: projects/ivpico.md
     - Toolkit: toolkit.md
     - Join: join.md
     - Events:
